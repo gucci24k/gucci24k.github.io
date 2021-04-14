@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ===== CSS ===== -->
+    <link
+      rel="stylesheet"
+      href="/Responsive Ecommerce Webshop/Assets/CSS/styles.css"
+    />
+
+    <!-- ===== BOX ICONS ===== -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./Assets/CSS/minimal.css" />
+    <link rel="stylesheet" href="./Assets/CSS/rateit.css" />
+
+    <title>Responsive Ecommerce Website</title>
+  </head>
+  <body>
+    <!--===== HEADER =====-->
+    <header class="l-header" id="header">
+      <nav class="nav bd-grid">
+        <div class="nav__toggle" id="nav-toggle">
+          <svg
+            width="24"
+            height="24"
+            xmlns="http://www.w3.org/2000/svg"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+          >
+            <path
+              d="M24 18v1h-24v-1h24zm0-6v1h-24v-1h24zm0-6v1h-24v-1h24z"
+              fill="#1040e2"
+            />
+            <path d="M24 19h-24v-1h24v1zm0-6h-24v-1h24v1zm0-6h-24v-1h24v1z" />
+          </svg>
+        </div>
+
+        <a href="#" class="nav__logo">The Network.</a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="./index.html" class="nav__link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="./index.html#featured" class="nav__link">Featured</a>
+            </li>
+            <li class="nav__item">
+              <a href="#shop" class="nav__link active">Shop</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">My Account</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">
+                <svg
+                  width="24"
+                  height="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                >
+                  <path
+                    d="M15.853 16.56c-1.683 1.517-3.911 2.44-6.353 2.44-5.243 0-9.5-4.257-9.5-9.5s4.257-9.5 9.5-9.5 9.5 4.257 9.5 9.5c0 2.442-.923 4.67-2.44 6.353l7.44 7.44-.707.707-7.44-7.44zm-6.353-15.56c4.691 0 8.5 3.809 8.5 8.5s-3.809 8.5-8.5 8.5-8.5-3.809-8.5-8.5 3.809-8.5 8.5-8.5z"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav__shop">
+          <a href="" data-toggle="modal" data-target="#cart">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M10 19.5c0 .829-.672 1.5-1.5 1.5s-1.5-.671-1.5-1.5c0-.828.672-1.5 1.5-1.5s1.5.672 1.5 1.5zm3.5-1.5c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zm1.336-5l1.977-7h-16.813l2.938 7h11.898zm4.969-10l-3.432 12h-12.597l.839 2h13.239l3.474-12h1.929l.743-2h-4.195z"
+              />
+            </svg>
+
+            <span class="total-count"></span>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="cart"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="exampleModalLabel">Cart</h3>
+            <button
+              type="button"
+              class="none"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <table class="show-cart table"></table>
+            <div>Total price: $<span class="total-cart"></span></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn1" data-dismiss="modal">
+              <span> Close </span>
+            </button>
+            <button type="button" class="btn1"><span>Order now</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="l-main">
+      <section class="featured section" id="shop">
+        <h2 class="section-title">All Products</h2>
+
+        <div class="featured__container bd-grid">
+          <article class="product">
+            <div class="product__sale">Sale</div>
+            <img
+              src="./Assets/images/apple11pro.png"
+              data-img="11promax2.png"
+              alt=""
+              class="swim-container product__img"
+            />
+            <span class="product__name">iPhone 11 Pro Max</span>
+            <span class="product__price">$1499.99</span>
+            <div
+              class="rateit"
+              data-rateit-value="2"
+              data-rateit-ispreset="true"
+              data-rateit-readonly="true"
+            ></div>
+            <a
+              href="#"
+              class="add-to-cart button-light"
+              data-name="Apple-Iphone-11pro-Max"
+              data-price="1499.99"
+              >Add to Cart <i class="bx bx-right-arrow-alt button-icon"></i
+            ></a>
+          </article>
+
+          <article class="product">
+            <img src="assets/img/featured2.png" alt="" class="product__img" />
+            <span class="product__name">Nike Jordan</span>
+            <span class="product__price">$149.99</span>
+            <a href="#" class="button-light product__button"
+              >Add to Cart <i class="bx bx-right-arrow-alt button-icon"></i
+            ></a>
+          </article>
+
+          <article class="product">
+            <img src="assets/img/featured3.png" alt="" class="product__img" />
+            <span class="product__name">Nike Jordan</span>
+            <span class="product__price">$149.99</span>
+            <a href="#" class="button-light product__button"
+              >Add to Cart <i class="bx bx-right-arrow-alt button-icon"></i
+            ></a>
+          </article>
+
+          <article class="product">
+            <img src="assets/img/new2.png" alt="" class="product__img" />
+            <span class="product__name">Nike Sply</span>
+            <span class="product__price">$79.96</span>
+            <a href="#" class="button-light product__button"
+              >Add to Cart <i class="bx bx-right-arrow-alt button-icon"></i
+            ></a>
+          </article>
+
+          <article class="product">
+            <img src="assets/img/new3.png" alt="" class="product__img" />
+            <span class="product__name">Nike Sply</span>
+            <span class="product__price">$79.96</span>
+            <a href="#" class="button-light product__button"
+              >Add to Cart <i class="bx bx-right-arrow-alt button-icon"></i
+            ></a>
+          </article>
+
+          <article class="product">
+            <img src="assets/img/new4.png" alt="" class="product__img" />
+            <span class="product__name">Nike Sply</span>
+            <span class="product__preci">$79.96</span>
+            <a href="#" class="button-light product__button"
+              >Add to Cart <i class="bx bx-right-arrow-alt button-icon"></i
+            ></a>
+          </article>
+
+          <article class="product">
+            <img src="assets/img/new5.png" alt="" class="product__img" />
+            <span class="product__name">Nike Sply</span>
+            <span class="product__price">$79.96</span>
+            <a href="#" class="button-light product__button"
+              >Add to Cart <i class="bx bx-right-arrow-alt button-icon"></i
+            ></a>
+          </article>
+
+          <article class="product">
+            <img src="assets/img/women1.png" alt="" class="product__img" />
+            <span class="product__name">Nike Womens</span>
+            <span class="product__price">$129.99</span>
+            <a href="#" class="button-light product__button"
+              >Add to Cart <i class="bx bx-right-arrow-alt button-icon"></i
+            ></a>
+          </article>
+
+          <article class="product">
+            <img src="assets/img/women2.png" alt="" class="product__img" />
+            <span class="product__name">Nike Womens</span>
+            <span class="product__price">$129.99</span>
+            <a href="#" class="button-light product__button"
+              >Add to Cart <i class="bx bx-right-arrow-alt button-icon"></i
+            ></a>
+          </article>
+
+          <article class="product">
+            <img src="assets/img/women3.png" alt="" class="product__img" />
+            <span class="product__name">Nike Womens</span>
+            <span class="product__preci">$129.99</span>
+            <a href="#" class="button-light product__button"
+              >Add to Cart <i class="bx bx-right-arrow-alt button-icon"></i
+            ></a>
+          </article>
+
+          <article class="product">
+            <img src="assets/img/women4.png" alt="" class="product__img" />
+            <span class="product__name">Nike Womens</span>
+            <span class="product__price">$129.99</span>
+            <a href="#" class="button-light product__button"
+              >Add to Cart <i class="bx bx-right-arrow-alt button-icon"></i
+            ></a>
+          </article>
+        </div>
+
+        <div class="product__pages bd-grid">
+          <div>
+            <span class="product__pag">1</span>
+            <span class="product__pag">2</span>
+            <span class="product__pag">3</span>
+            <span class="product__pag">4</span>
+            <span class="product__pag">&#8594;</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--===== FOOTER =====-->
+    <footer class="footer section">
+      <div class="footer__container bd-grid">
+        <div class="footer__box">
+          <h3 class="footer__title">The Network.</h3>
+          <p class="footer__description">New collection of shoes 2020.</p>
+        </div>
+
+        <div class="footer__box">
+          <h3 class="footer__title">EXPLORE</h3>
+          <ul>
+            <li><a href="#home" class="footer__link">Home</a></li>
+            <li><a href="#featured" class="footer__link">Featured</a></li>
+            <li><a href="#women" class="footer__link">Women</a></li>
+            <li><a href="#new" class="footer__link">New</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__box">
+          <h3 class="footer__title">SUPPORT</h3>
+          <ul>
+            <li><a href="#" class="footer__link">Product Help</a></li>
+            <li><a href="#" class="footer__link">Customer Care</a></li>
+            <li><a href="#" class="footer__link">Authorized Services</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__box">
+          <a href="#" class="footer__social"><i class="bx bxl-facebook"></i></a>
+          <a href="#" class="footer__social"
+            ><i class="bx bxl-instagram"></i
+          ></a>
+          <a href="#" class="footer__social"><i class="bx bxl-twitter"></i></a>
+          <a href="#" class="footer__social"><i class="bx bxl-google"></i></a>
+        </div>
+      </div>
+      <p class="footer__copy">&#169; 2020 The Network. All rights reserved</p>
+    </footer>
+
+    <!--===== MAIN JS =====-->
+    <script src="./Assets/JS/jquery.js"></script>
+    <script src="./Assets/JS/jquery.rateit.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+    <script src="/Responsive Ecommerce Webshop/Assets/JS/script.js"></script>
+    <script src="./Assets/JS/bootstrap.js"></script>
+  </body>
+</html>

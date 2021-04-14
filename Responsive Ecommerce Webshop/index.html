@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ===== CSS ===== -->
+    <link
+      rel="stylesheet"
+      href="/Responsive Ecommerce Webshop/Assets/CSS/styles.css"
+    />
+
+    <!-- ===== BOX ICONS ===== -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./Assets/CSS/minimal.css" />
+    <link rel="stylesheet" href="./Assets/CSS/rateit.css" />
+    <link rel="stylesheet" href="./Assets/CSS/fliccckity.css" />
+    <link rel="stylesheet" href="./Assets/CSS/fullscreen.css" />
+    <link rel="stylesheet" href="./Assets/CSS/cookieBubble.css" />
+    <link rel="stylesheet" href="./Assets/CSS/countdowntimer.css" />
+
+    <title>Responsive Ecommerce Website</title>
+  </head>
+  <body>
+    <!--===== HEADER =====-->
+    <header class="l-header" id="header">
+      <nav class="nav bd-grid">
+        <div class="nav__toggle" id="nav-toggle">
+          <svg
+            width="24"
+            height="24"
+            xmlns="http://www.w3.org/2000/svg"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+          >
+            <path
+              d="M24 18v1h-24v-1h24zm0-6v1h-24v-1h24zm0-6v1h-24v-1h24z"
+              fill="#1040e2"
+            />
+            <path d="M24 19h-24v-1h24v1zm0-6h-24v-1h24v1zm0-6h-24v-1h24v1z" />
+          </svg>
+        </div>
+
+        <a href="#" class="nav__logo"
+          ><img src="./Assets/images/LOGO TRANSPARENT (1).png" alt="logo"
+        /></a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="#featured" class="nav__link">Featured</a>
+            </li>
+            <li class="nav__item">
+              <a href="./shop.html" class="nav__link">Shop</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">My Account</a>
+            </li>
+            <li class="nav__item">
+              <div class="nav__link">
+                <!----- close button ----->
+                <div class="close">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
+                    />
+                  </svg>
+                </div>
+
+                <!---- search field ------->
+                <div class="search">
+                  <svg
+                    class="search__svg"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z"
+                    />
+                  </svg>
+                  <input type="text" class="input" id="typing" />
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav__shop">
+          <a href="" data-toggle="modal" data-target="#cart">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M10 19.5c0 .829-.672 1.5-1.5 1.5s-1.5-.671-1.5-1.5c0-.828.672-1.5 1.5-1.5s1.5.672 1.5 1.5zm3.5-1.5c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zm1.336-5l1.977-7h-16.813l2.938 7h11.898zm4.969-10l-3.432 12h-12.597l.839 2h13.239l3.474-12h1.929l.743-2h-4.195z"
+              />
+            </svg>
+
+            <span class="total-count"></span>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="cart"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="exampleModalLabel">Cart</h3>
+            <button
+              type="button"
+              class="none"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <table class="show-cart table"></table>
+            <div>Total price: $<span class="total-cart"></span></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn1" data-dismiss="modal">
+              <span> Close </span>
+            </button>
+            <button type="button" class="btn1"><span>Order now</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="l-main">
+      <!--===== HOME =====-->
+      <section class="home" id="home">
+        <div class="home__container">
+          <!-- Flickity HTML init -->
+          <div
+            class="carousel"
+            data-flickity='{ "fullscreen": true, "lazyLoad": true, "autoPlay": 3500,"wrapAround": true }'
+          >
+            <div class="carousel-cell">
+              <img
+                class="carousel-cell-image"
+                data-flickity-lazyload="./Assets/images/product-banner.png"
+              />
+            </div>
+            <div class="carousel-cell">
+              <img
+                class="carousel-cell-image"
+                data-flickity-lazyload="https://picsum.photos/540/720/?image=696"
+              />
+            </div>
+            <div class="carousel-cell">
+              <img
+                class="carousel-cell-image"
+                data-flickity-lazyload="https://picsum.photos/720/540/?image=56"
+              />
+            </div>
+            <div class="carousel-cell">
+              <img
+                class="carousel-cell-image"
+                data-flickity-lazyload="https://picsum.photos/800/500/?image=1084"
+              />
+            </div>
+            <div class="carousel-cell">
+              <img
+                class="carousel-cell-image"
+                data-flickity-lazyload="https://picsum.photos/720/540/?image=1080"
+              />
+            </div>
+            <div class="carousel-cell">
+              <img
+                class="carousel-cell-image"
+                data-flickity-lazyload="https://picsum.photos/640/640/?image=1074"
+              />
+            </div>
+            <div class="carousel-cell">
+              <img
+                class="carousel-cell-image"
+                data-flickity-lazyload="https://picsum.photos/720/540/?image=1069"
+              />
+            </div>
+            <div class="carousel-cell">
+              <img
+                class="carousel-cell-image"
+                data-flickity-lazyload="https://picsum.photos/800/500/?image=1062"
+              />
+            </div>
+            <div class="carousel-cell">
+              <img
+                class="carousel-cell-image"
+                data-flickity-lazyload="https://picsum.photos/720/540/?image=1002"
+              />
+            </div>
+            <div class="carousel-cell">
+              <img
+                class="carousel-cell-image"
+                data-flickity-lazyload="https://picsum.photos/640/640/?image=935"
+              />
+            </div>
+            <div class="carousel-cell">
+              <img
+                class="carousel-cell-image"
+                data-flickity-lazyload="https://picsum.photos/720/540/?image=855"
+              />
+            </div>
+            <div class="carousel-cell">
+              <img
+                class="carousel-cell-image"
+                data-flickity-lazyload="https://picsum.photos/640/640/?image=824"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--===== FEATURED =====-->
+      <section class="featured section" id="featured">
+        <h2 class="section-title">FEATURED</h2>
+
+        <div class="featured__container bd-grid">
+          <article class="product">
+            <div class="product__sale">Sale</div>
+
+            <img
+              data-alt-src="./Assets/images/11promax2.png"
+              src="./Assets/images/apple11pro.png"
+              alt=""
+              class="swap product__img"
+            />
+            <span class="product__name">iPhone 11 Pro Max</span>
+            <del>
+              <span class="product__price">$1499.99</span>
+            </del>
+            <ins>
+              <span class="product__price">$887.99</span>
+            </ins>
+            <div
+              class="rateit"
+              data-rateit-value="1"
+              data-rateit-ispreset="true"
+              data-rateit-readonly="true"
+            ></div>
+            <a href="#" data-name="Apple-Iphone-11pro-Max" data-price="1499.99">
+              <button class="add-to-cart">
+                <div class="default">Add to cart</div>
+                <div class="success">Added</div>
+                <div class="cart">
+                  <div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                </div>
+                <div class="dots"></div>
+              </button>
+            </a>
+          </article>
+
+          <article class="product">
+            <div class="product__sale">Sale</div>
+            <img src="assets/img/featured2.png" alt="" class="product__img" />
+            <span class="product__name">Nike Free RN</span>
+            <span class="product__price">$149.99</span>
+            <a href="#" data-name="Nike-Free-RN" data-price="149.99">
+              <button class="add-to-cart">
+                <div class="default">Add to cart</div>
+                <div class="success">Added</div>
+                <div class="cart">
+                  <div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                </div>
+                <div class="dots"></div>
+              </button>
+            </a>
+          </article>
+
+          <article class="product">
+            <div class="product__sale">Sale</div>
+            <img src="assets/img/featured3.png" alt="" class="product__img" />
+            <span class="product__name">Nike Free RN</span>
+            <span class="product__price">$149.99</span>
+            <a
+              href="#"
+              class="add-to-cart button-light"
+              data-name="Nike-Free-RN"
+              data-price="149.99"
+              >Add to Cart <i class="bx bx-right-arrow-alt button-icon"></i
+            ></a>
+          </article>
+        </div>
+      </section>
+
+      <!--===== COLLECTION =====-->
+      <section class="collection section">
+        <div class="collection__container bd-grid">
+          <div class="collection__card">
+            <div class="collection__data">
+              <h3 class="collection__name">Gaming</h3>
+              <p class="collection__description">New collection 2020</p>
+              <a href="" class="button-light"
+                >Buy now <i class="bx bx-right-arrow-alt button-icon"></i
+              ></a>
+            </div>
+
+            <img
+              src="assets/img/collection1.png"
+              alt=""
+              class="collection__img"
+            />
+          </div>
+
+          <div class="collection__card">
+            <div class="collection__data">
+              <h3 class="collection__name">Networking.</h3>
+              <p class="collection__description">New collection 2020</p>
+              <a href="" class="button-light"
+                >Buy now <i class="bx bx-right-arrow-alt button-icon"></i
+              ></a>
+            </div>
+
+            <img
+              src="assets/img/collection2.png"
+              alt=""
+              class="collection__img"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!--===== WOMEN SNEAKERS =====-->
+      <section class="women section" id="women">
+        <h2 class="section-title">WOMEN SNEAKERS</h2>
+
+        <div class="women__container bd-grid">
+          <article class="product">
+            <img src="assets/img/women1.png" alt="" class="product__img" />
+            <span class="product__name">Nike Free TR</span>
+            <span class="product__price">$129.90</span>
+            <a href="#" class="button-light"
+              >Add to Cart <i class="bx bx-right-arrow-alt button-icon"></i
+            ></a>
+          </article>
+
+          <article class="product">
+            <img src="assets/img/women2.png" alt="" class="product__img" />
+            <span class="product__name">Nike Flyknit</span>
+            <span class="product__price">$129.90</span>
+            <a href="#" class="button-light"
+              >Add to Cart <i class="bx bx-right-arrow-alt button-icon"></i
+            ></a>
+          </article>
+
+          <article class="product">
+            <img src="assets/img/women3.png" alt="" class="product__img" />
+            <span class="product__name">Nike GS Pink</span>
+            <span class="product__price">$129.90</span>
+            <a href="#" class="button-light"
+              >Add to Cart <i class="bx bx-right-arrow-alt button-icon"></i
+            ></a>
+          </article>
+
+          <article class="product">
+            <img src="assets/img/women4.png" alt="" class="product__img" />
+            <span class="product__name">Nike Get 5</span>
+            <span class="product__price">$129.90</span>
+            <a href="#" class="button-light"
+              >Add to Cart <i class="bx bx-right-arrow-alt button-icon"></i
+            ></a>
+          </article>
+        </div>
+      </section>
+
+      <!--===== OFFER =====-->
+      <section class="offer section">
+        <div class="offer__container bd-grid">
+          <div class="offer__data">
+            <h3 class="offer__title">50% OFF</h3>
+            <p class="offer__description">In Adidas Superstar sneakers</p>
+            <a href="#" class="button">Shop Now</a>
+          </div>
+
+          <img src="assets/img/offert.png" alt="" class="offer__img" />
+        </div>
+      </section>
+
+      <!--===== NEW COLLECTION =====-->
+      <section class="new section" id="new">
+        <h2 class="section-title">NEW COLLECTION</h2>
+
+        <div class="new__container bd-grid">
+          <div class="new__mens">
+            <img src="assets/img/new1.png" alt="" class="new__mens-img" />
+            <h3 class="new__title">Mens Shoes</h3>
+            <span class="new__preci">From $90</span>
+            <a href="#" class="button-light"
+              >View Collection <i class="bx bx-right-arrow-alt button-icon"></i
+            ></a>
+          </div>
+
+          <div class="new__product">
+            <div class="new__product-card">
+              <img src="assets/img/new2.png" alt="" class="new__product-img" />
+              <div class="new__product-overlay">
+                <a href="#" class="button">Add to Cart</a>
+              </div>
+            </div>
+
+            <div class="new__product-card">
+              <img src="assets/img/new3.png" alt="" class="new__product-img" />
+              <div class="new__product-overlay">
+                <a href="#" class="button">Add to Cart</a>
+              </div>
+            </div>
+
+            <div class="new__product-card">
+              <img src="assets/img/new4.png" alt="" class="new__product-img" />
+              <div class="new__product-overlay">
+                <a href="#" class="button">Add to Cart</a>
+              </div>
+            </div>
+
+            <div class="new__product-card">
+              <img src="assets/img/new5.png" alt="" class="new__product-img" />
+              <div class="new__product-overlay">
+                <a href="#" class="button">Add to Cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--===== NEWSLETTER =====-->
+      <section class="newsletter section">
+        <div class="newsletter__container bd-grid">
+          <div>
+            <h3 class="newsletter__title">
+              Subscribe And Get <br />
+              10% OFF
+            </h3>
+            <p class="newsletter__description">
+              Get 10% discount for all products
+            </p>
+          </div>
+
+          <form action="" class="newsletter__subscribe">
+            <input
+              type="text"
+              placeholder="@email.com"
+              class="newsletter__input"
+            />
+            <a href="#" class="button">Subscribe</a>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!--===== FOOTER =====-->
+    <footer class="footer section">
+      <div class="footer__container bd-grid">
+        <div class="footer__box">
+          <h3 class="footer__title">
+            <img src="./Assets/images/LOGO TRANSPARENT (1).png" alt="logo" />
+          </h3>
+          <p class="footer__description">Your One-Stop Utilities Hub.</p>
+        </div>
+
+        <div class="footer__box">
+          <h3 class="footer__title">EXPLORE</h3>
+          <ul>
+            <li><a href="#home" class="footer__link">Home</a></li>
+            <li><a href="#featured" class="footer__link">Featured</a></li>
+            <li><a href="#women" class="footer__link">Women</a></li>
+            <li><a href="#new" class="footer__link">New</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__box">
+          <h3 class="footer__title">SUPPORT</h3>
+          <ul>
+            <li><a href="#" class="footer__link">Product Help</a></li>
+            <li><a href="#" class="footer__link">Customer Care</a></li>
+            <li><a href="#" class="footer__link">Authorized service</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__box">
+          <a href="#" class="footer__social"><i class="bx bxl-facebook"></i></a>
+          <a href="#" class="footer__social"
+            ><i class="bx bxl-instagram"></i
+          ></a>
+          <a href="#" class="footer__social"><i class="bx bxl-twitter"></i></a>
+          <a href="#" class="footer__social"><i class="bx bxl-google"></i></a>
+        </div>
+      </div>
+      <p class="footer__copy">&#169; 2020 The Network. All rights reserved</p>
+    </footer>
+
+    <!--===== MAIN JS =====-->
+    <script src="./Assets/JS/jquery.js"></script>
+    <script src="./Assets/JS/jquery.rateit.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+    <script src="./Assets/JS/typewriter.js"></script>
+    <script src="/Responsive Ecommerce Webshop/Assets/JS/script.js"></script>
+    <script src="./Assets/JS/bootstrap.js"></script>
+    <script src="./Assets/JS/flickity.min.js"></script>
+    <script src="./Assets/JS/fullscreen.js"></script>
+    <script src="./Assets/JS/jquery.animateTyping.js"></script>
+    <script src="./Assets/JS/placeholderTypewriter.js"></script>
+    <script src="./Assets/JS/cookieBubble.js"></script>
+    <script src="./Assets/JS/countdown.jquery.min.js"></script>
+
+    <script>
+      new TypeWriter("#typing", ["Text 1", "Text 2", "Text 3"], {
+        autoStart: false,
+        writeDelay: 60,
+        deleteDelay: 40,
+        holdOnceWritten: 1000,
+        holdOnceDeleted: 1000,
+        stopAfterOnce: true,
+      });
+
+      (function ($) {
+        $.cookieBubble({
+          messageTextColor: "rgba(0, 0, 0, 1)",
+          buttonText: "Got It",
+          iconColor: "rgba(138, 138, 138, 1)",
+          buttonColor: "rgba(11, 11, 11, 1)",
+          iconVisibility: true,
+          cookiePolicyButtonText: "Read our cookie Policy",
+          cookiePolicyButtonUrl: "http://allaboutcookies.org",
+          cookiePolicyButtonTarget: "_blank",
+          boxPosition: "bottom-center",
+          boxAppearDelay: "3000",
+          messageText:
+            "We use cookies to personalize your experience. By continuing to visit this website you agree to our use of cookies.",
+        });
+      })(jQuery);
+
+      $(function () {
+        $("#countdown").countdown({
+          year: 2022, // YYYY Format
+
+          month: 1, // 1-12
+
+          day: 1, // 1-31
+
+          hour: 0, // 24 hour format 0-23
+
+          minute: 0, // 0-59
+
+          second: 0, // 0-59
+        });
+      });
+    </script>
+  </body>
+</html>
