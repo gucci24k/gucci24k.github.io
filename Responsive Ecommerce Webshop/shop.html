@@ -4,7 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="preconnect" href="https://app.snipcart.com" />
+    <link rel="preconnect" href="https://cdn.snipcart.com" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <!-- ===== CSS ===== -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.snipcart.com/themes/v3.1.0/default/snipcart.css"
+    />
     <link
       rel="stylesheet"
       href="/Responsive Ecommerce Webshop/Assets/CSS/styles.css"
@@ -18,8 +31,11 @@
 
     <link rel="stylesheet" href="./Assets/CSS/minimal.css" />
     <link rel="stylesheet" href="./Assets/CSS/rateit.css" />
-
-    <title>Responsive Ecommerce Website</title>
+    <link rel="stylesheet" href="./Assets/CSS/fliccckity.css" />
+    <link rel="stylesheet" href="./Assets/CSS/fullscreen.css" />
+    <link rel="stylesheet" href="./Assets/CSS/cookieBubble.css" />
+    <link rel="stylesheet" href="./Assets/CSS/countdowntimer.css" />
+    <link rel="stylesheet" href="./Assets/CSS/countdowncody.css" />
   </head>
   <body>
     <!--===== HEADER =====-->
@@ -41,7 +57,9 @@
           </svg>
         </div>
 
-        <a href="#" class="nav__logo">The Network.</a>
+        <a href="#" class="nav__logo"
+          ><img src="./Assets/images/LOGO TRANSPARENT (1).png" alt="logo"
+        /></a>
 
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
@@ -49,7 +67,7 @@
               <a href="./index.html" class="nav__link">Home</a>
             </li>
             <li class="nav__item">
-              <a href="./index.html#featured" class="nav__link">Featured</a>
+              <a href="#featured" class="nav__link">Featured</a>
             </li>
             <li class="nav__item">
               <a href="#shop" class="nav__link active">Shop</a>
@@ -58,88 +76,58 @@
               <a href="" class="nav__link">My Account</a>
             </li>
             <li class="nav__item">
-              <a href="" class="nav__link">
-                <svg
-                  width="24"
-                  height="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                >
-                  <path
-                    d="M15.853 16.56c-1.683 1.517-3.911 2.44-6.353 2.44-5.243 0-9.5-4.257-9.5-9.5s4.257-9.5 9.5-9.5 9.5 4.257 9.5 9.5c0 2.442-.923 4.67-2.44 6.353l7.44 7.44-.707.707-7.44-7.44zm-6.353-15.56c4.691 0 8.5 3.809 8.5 8.5s-3.809 8.5-8.5 8.5-8.5-3.809-8.5-8.5 3.809-8.5 8.5-8.5z"
-                  />
-                </svg>
+              <a class="nav__link">
+                <!----- close button ----->
+                <div class="close">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
+                    />
+                  </svg>
+                </div>
+
+                <!---- search field ------->
+                <div class="search">
+                  <svg
+                    class="search__svg"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z"
+                    />
+                  </svg>
+
+                  <input type="text" class="input" id="typing" />
+                </div>
               </a>
             </li>
           </ul>
         </div>
 
         <div class="nav__shop">
-          <a href="" data-toggle="modal" data-target="#cart">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M10 19.5c0 .829-.672 1.5-1.5 1.5s-1.5-.671-1.5-1.5c0-.828.672-1.5 1.5-1.5s1.5.672 1.5 1.5zm3.5-1.5c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zm1.336-5l1.977-7h-16.813l2.938 7h11.898zm4.969-10l-3.432 12h-12.597l.839 2h13.239l3.474-12h1.929l.743-2h-4.195z"
-              />
-            </svg>
-
-            <span class="total-count"></span>
-          </a>
+          <svg
+            class="snipcart-checkout"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M10 19.5c0 .829-.672 1.5-1.5 1.5s-1.5-.671-1.5-1.5c0-.828.672-1.5 1.5-1.5s1.5.672 1.5 1.5zm3.5-1.5c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zm1.336-5l1.977-7h-16.813l2.938 7h11.898zm4.969-10l-3.432 12h-12.597l.839 2h13.239l3.474-12h1.929l.743-2h-4.195z"
+            />
+          </svg>
+          <span class="snipcart-items-count"></span>
         </div>
       </nav>
     </header>
-
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="cart"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h3 class="modal-title" id="exampleModalLabel">Cart</h3>
-            <button
-              type="button"
-              class="none"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"
-                  />
-                </svg>
-              </span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <table class="show-cart table"></table>
-            <div>Total price: $<span class="total-cart"></span></div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn1" data-dismiss="modal">
-              <span> Close </span>
-            </button>
-            <button type="button" class="btn1"><span>Order now</span></button>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <main class="l-main">
       <section class="featured section" id="shop">
@@ -148,27 +136,55 @@
         <div class="featured__container bd-grid">
           <article class="product">
             <div class="product__sale">Sale</div>
+
             <img
+              data-alt-src="./Assets/images/11promax2.png"
               src="./Assets/images/apple11pro.png"
-              data-img="11promax2.png"
               alt=""
-              class="swim-container product__img"
+              class="swap product__img"
             />
+
+            <div
+              class="countdown countdown--has-labels text-xl js-countdown"
+              data-timer="104400"
+              data-labels="D, H, M, S"
+            ></div>
+
             <span class="product__name">iPhone 11 Pro Max</span>
-            <span class="product__price">$1499.99</span>
+            <del>
+              <span class="product__price">UGX 2,400,000</span>
+            </del>
+            <ins>
+              <span class="product__price">UGX 2,100,000</span>
+            </ins>
             <div
               class="rateit"
-              data-rateit-value="2"
+              data-rateit-value="1"
               data-rateit-ispreset="true"
               data-rateit-readonly="true"
             ></div>
-            <a
-              href="#"
-              class="add-to-cart button-light"
-              data-name="Apple-Iphone-11pro-Max"
-              data-price="1499.99"
-              >Add to Cart <i class="bx bx-right-arrow-alt button-icon"></i
-            ></a>
+
+            <button
+              class="snipcart-add-item add-to-cart"
+              data-item-id="starry-night"
+              data-item-price="2100000"
+              data-item-url="/test.netco.com"
+              data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
+              data-item-image="./Assets/images/apple11pro.png"
+              data-item-name="Apple IPhone 11 Pro Max"
+              data-item-custom1-name="Color"
+              data-item-custom1-options="Black|Brown[+100000]|Gold[+300000]"
+            >
+              <div class="default">Add to cart</div>
+              <div class="success">Added</div>
+              <div class="cart">
+                <div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+              <div class="dots"></div>
+            </button>
           </article>
 
           <article class="product">
@@ -315,9 +331,82 @@
 
     <!--===== MAIN JS =====-->
     <script src="./Assets/JS/jquery.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
     <script src="./Assets/JS/jquery.rateit.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+    <script src="./Assets/JS/typewriter.js"></script>
     <script src="/Responsive Ecommerce Webshop/Assets/JS/script.js"></script>
     <script src="./Assets/JS/bootstrap.js"></script>
+    <script src="./Assets/JS/flickity.min.js"></script>
+    <script src="./Assets/JS/fullscreen.js"></script>
+    <script src="./Assets/JS/jquery.animateTyping.js"></script>
+    <script src="./Assets/JS/placeholderTypewriter.js"></script>
+    <script src="./Assets/JS/cookieBubble.js"></script>
+    <script src="./Assets/JS/Util.js"></script>
+    <script src="./Assets/JS/countdown.jquery.min.js"></script>
+    <script src="./Assets/JS/countdowncody.js"></script>
+
+    <script>
+      new TypeWriter("#typing", ["Text 1", "Text 2", "Text 3"], {
+        autoStart: false,
+        writeDelay: 60,
+        deleteDelay: 40,
+        holdOnceWritten: 1000,
+        holdOnceDeleted: 1000,
+        stopAfterOnce: true,
+      });
+
+      (function ($) {
+        $.cookieBubble({
+          messageTextColor: "rgba(0, 0, 0, 1)",
+          buttonText: "Got It",
+          iconColor: "rgba(138, 138, 138, 1)",
+          buttonColor: "rgba(11, 11, 11, 1)",
+          iconVisibility: true,
+          cookiePolicyButtonText: "Read our cookie Policy",
+          cookiePolicyButtonUrl: "http://allaboutcookies.org",
+          cookiePolicyButtonTarget: "_blank",
+          boxPosition: "bottom-center",
+          boxAppearDelay: "3000",
+          messageText:
+            "We use cookies to personalize your experience. By continuing to visit this website you agree to our use of cookies.",
+        });
+      })(jQuery);
+
+      $(function () {
+        $("#countdown").countdown({
+          year: 2022, // YYYY Format
+
+          month: 1, // 1-12
+
+          day: 1, // 1-31
+
+          hour: 0, // 24 hour format 0-23
+
+          minute: 0, // 0-59
+
+          second: 0, // 0-59
+        });
+      });
+    </script>
+    <script
+      async
+      src="https://cdn.snipcart.com/themes/v3.1.0/default/snipcart.js"
+    ></script>
+    <div
+      hidden
+      id="snipcart"
+      data-api-key="MjFkYjc2NjQtZDE5NS00M2ViLWExNGItMWQ3ODE4N2FiYTM1NjM3NTQwMDk4ODMwOTQyNzE4"
+      data-config-modal-style="side"
+    ></div>
   </body>
 </html>

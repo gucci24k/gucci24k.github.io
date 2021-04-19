@@ -4,16 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="preconnect" href="https://app.snipcart.com" />
+    <link rel="preconnect" href="https://cdn.snipcart.com" />
+    <!-- ===== BOX ICONS ===== -->
+
+    <link rel="stylesheet" href="../boxicons-2.0.7/css/boxicons.min.css" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <!-- ===== CSS ===== -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.snipcart.com/themes/v3.1.0/default/snipcart.css"
+    />
     <link
       rel="stylesheet"
       href="/Responsive Ecommerce Webshop/Assets/CSS/styles.css"
-    />
-
-    <!-- ===== BOX ICONS ===== -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
-      rel="stylesheet"
     />
 
     <link rel="stylesheet" href="./Assets/CSS/minimal.css" />
@@ -22,6 +34,7 @@
     <link rel="stylesheet" href="./Assets/CSS/fullscreen.css" />
     <link rel="stylesheet" href="./Assets/CSS/cookieBubble.css" />
     <link rel="stylesheet" href="./Assets/CSS/countdowntimer.css" />
+    <link rel="stylesheet" href="./Assets/CSS/countdowncody.css" />
 
     <title>Responsive Ecommerce Website</title>
   </head>
@@ -64,7 +77,7 @@
               <a href="" class="nav__link">My Account</a>
             </li>
             <li class="nav__item">
-              <div class="nav__link">
+              <a class="nav__link">
                 <!----- close button ----->
                 <div class="close">
                   <svg
@@ -92,163 +105,127 @@
                       d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z"
                     />
                   </svg>
+
                   <input type="text" class="input" id="typing" />
                 </div>
-              </div>
+              </a>
             </li>
           </ul>
         </div>
 
         <div class="nav__shop">
-          <a href="" data-toggle="modal" data-target="#cart">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M10 19.5c0 .829-.672 1.5-1.5 1.5s-1.5-.671-1.5-1.5c0-.828.672-1.5 1.5-1.5s1.5.672 1.5 1.5zm3.5-1.5c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zm1.336-5l1.977-7h-16.813l2.938 7h11.898zm4.969-10l-3.432 12h-12.597l.839 2h13.239l3.474-12h1.929l.743-2h-4.195z"
-              />
-            </svg>
-
-            <span class="total-count"></span>
-          </a>
+          <svg
+            class="snipcart-checkout"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M10 19.5c0 .829-.672 1.5-1.5 1.5s-1.5-.671-1.5-1.5c0-.828.672-1.5 1.5-1.5s1.5.672 1.5 1.5zm3.5-1.5c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zm1.336-5l1.977-7h-16.813l2.938 7h11.898zm4.969-10l-3.432 12h-12.597l.839 2h13.239l3.474-12h1.929l.743-2h-4.195z"
+            />
+          </svg>
+          <span class="snipcart-items-count"></span>
         </div>
       </nav>
     </header>
 
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="cart"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h3 class="modal-title" id="exampleModalLabel">Cart</h3>
-            <button
-              type="button"
-              class="none"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"
-                  />
-                </svg>
-              </span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <table class="show-cart table"></table>
-            <div>Total price: $<span class="total-cart"></span></div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn1" data-dismiss="modal">
-              <span> Close </span>
-            </button>
-            <button type="button" class="btn1"><span>Order now</span></button>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <main class="l-main">
       <!--===== HOME =====-->
-      <section class="home" id="home">
-        <div class="home__container">
-          <!-- Flickity HTML init -->
-          <div
-            class="carousel"
-            data-flickity='{ "fullscreen": true, "lazyLoad": true, "autoPlay": 3500,"wrapAround": true }'
-          >
-            <div class="carousel-cell">
-              <img
-                class="carousel-cell-image"
-                data-flickity-lazyload="./Assets/images/product-banner.png"
-              />
+      <!-- Bootstrap init -->
+      <div
+        id="myCarousel"
+        class="carousel slide carousel-fade"
+        data-ride="carousel"
+      >
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-interval="8000">
+            <div
+              class="overlay-image"
+              style="
+                background-image: url(./Assets/images/taylor-vick-aWslrFhs1w4-unsplash.jpg);
+              "
+            ></div>
+            <div class="container">
+              <h1>Our Catalogue</h1>
+              <p>
+                The Network Company Shop Uganda is your one stop shop for all
+                your networking solutions including cameras, access control
+                systems, networks, IOT devices, AI, ML, LANs, WANs and servers.
+              </p>
+              <a href="" class="btn btn-lg add-to-cart"> Shop Now </a>
             </div>
-            <div class="carousel-cell">
-              <img
-                class="carousel-cell-image"
-                data-flickity-lazyload="https://picsum.photos/540/720/?image=696"
-              />
+          </div>
+
+          <div class="carousel-item" data-interval="8000">
+            <div
+              class="overlay-image"
+              style="
+                background-image: url(./Assets/images/christina-wocintechchat-com-glRqyWJgUeY-unsplash.jpg);
+              "
+            ></div>
+            <div class="container">
+              <h1>We are the Best</h1>
+              <p>
+                That's Right!! That is a guarantee from one of the leading I.T
+                service providers in Uganda. We offer total commitment to
+                advanced systems, logistics, consultations, procurement,
+                security installations and computer maintenance.
+              </p>
+              <a href="" class="btn btn-lg btn-primary add-to-cart">
+                Contact Us
+              </a>
             </div>
-            <div class="carousel-cell">
-              <img
-                class="carousel-cell-image"
-                data-flickity-lazyload="https://picsum.photos/720/540/?image=56"
-              />
-            </div>
-            <div class="carousel-cell">
-              <img
-                class="carousel-cell-image"
-                data-flickity-lazyload="https://picsum.photos/800/500/?image=1084"
-              />
-            </div>
-            <div class="carousel-cell">
-              <img
-                class="carousel-cell-image"
-                data-flickity-lazyload="https://picsum.photos/720/540/?image=1080"
-              />
-            </div>
-            <div class="carousel-cell">
-              <img
-                class="carousel-cell-image"
-                data-flickity-lazyload="https://picsum.photos/640/640/?image=1074"
-              />
-            </div>
-            <div class="carousel-cell">
-              <img
-                class="carousel-cell-image"
-                data-flickity-lazyload="https://picsum.photos/720/540/?image=1069"
-              />
-            </div>
-            <div class="carousel-cell">
-              <img
-                class="carousel-cell-image"
-                data-flickity-lazyload="https://picsum.photos/800/500/?image=1062"
-              />
-            </div>
-            <div class="carousel-cell">
-              <img
-                class="carousel-cell-image"
-                data-flickity-lazyload="https://picsum.photos/720/540/?image=1002"
-              />
-            </div>
-            <div class="carousel-cell">
-              <img
-                class="carousel-cell-image"
-                data-flickity-lazyload="https://picsum.photos/640/640/?image=935"
-              />
-            </div>
-            <div class="carousel-cell">
-              <img
-                class="carousel-cell-image"
-                data-flickity-lazyload="https://picsum.photos/720/540/?image=855"
-              />
-            </div>
-            <div class="carousel-cell">
-              <img
-                class="carousel-cell-image"
-                data-flickity-lazyload="https://picsum.photos/640/640/?image=824"
-              />
+          </div>
+
+          <div class="carousel-item" data-interval="8000">
+            <div
+              class="overlay-image"
+              style="
+                background-image: url(./Assets/images/imgix-pgdaAwf6IJg-unsplash.jpg);
+              "
+            ></div>
+            <div class="container">
+              <h1>Business Solutions.</h1>
+              <p>
+                We are seasoned professionals with vast engineering experience
+                in concept, design, intergration, installation, operation and
+                maintenance. The scope of our innovative network engineering
+                solutions encompasses everything, whether the need stems from a
+                single department or small business to a complete
+                enterprise-wide network.
+              </p>
+              <a href="" class="btn btn-lg btn-primary add-to-cart">
+                Contact Us
+              </a>
             </div>
           </div>
         </div>
-      </section>
+        <a
+          href="#myCarousel"
+          class="carousel-control-prev"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="sr-only">Previous</span>
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </a>
+
+        <a
+          href="#myCarousel"
+          class="carousel-control-next"
+          role="button"
+          data-slide="next"
+        >
+          <span class="sr-only">Previous</span>
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
+      </div>
 
       <!--===== FEATURED =====-->
       <section class="featured section" id="featured">
@@ -264,12 +241,19 @@
               alt=""
               class="swap product__img"
             />
+
+            <div
+              class="countdown countdown--has-labels text-xl js-countdown"
+              data-timer="1044000"
+              data-labels="D, H, M, S"
+            ></div>
+
             <span class="product__name">iPhone 11 Pro Max</span>
             <del>
-              <span class="product__price">$1499.99</span>
+              <span class="product__price">UGX 2,400,000</span>
             </del>
             <ins>
-              <span class="product__price">$887.99</span>
+              <span class="product__price">UGX 2,100,000</span>
             </ins>
             <div
               class="rateit"
@@ -277,67 +261,150 @@
               data-rateit-ispreset="true"
               data-rateit-readonly="true"
             ></div>
-            <a href="#" data-name="Apple-Iphone-11pro-Max" data-price="1499.99">
-              <button class="add-to-cart">
-                <div class="default">Add to cart</div>
-                <div class="success">Added</div>
-                <div class="cart">
-                  <div>
-                    <div></div>
-                    <div></div>
-                  </div>
+
+            <button
+              class="snipcart-add-item add-to-cart"
+              data-item-id="starry-night"
+              data-item-price="2100000"
+              data-item-url="https://mocki.io/v1/c4774914-c671-46be-aa29-6b359e4b3297"
+              data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
+              data-item-image="./Assets/images/apple11pro.png"
+              data-item-name="Apple IPhone 11 Pro Max"
+              data-item-custom1-name="Color"
+              data-item-custom1-options="Black|Brown|Gold"
+            >
+              <div class="default">Add to cart</div>
+              <div class="success">Added</div>
+              <div class="cart">
+                <div>
+                  <div></div>
+                  <div></div>
                 </div>
-                <div class="dots"></div>
-              </button>
-            </a>
+              </div>
+              <div class="dots"></div>
+            </button>
           </article>
 
           <article class="product">
             <div class="product__sale">Sale</div>
-            <img src="assets/img/featured2.png" alt="" class="product__img" />
-            <span class="product__name">Nike Free RN</span>
-            <span class="product__price">$149.99</span>
-            <a href="#" data-name="Nike-Free-RN" data-price="149.99">
-              <button class="add-to-cart">
-                <div class="default">Add to cart</div>
-                <div class="success">Added</div>
-                <div class="cart">
-                  <div>
-                    <div></div>
-                    <div></div>
-                  </div>
+
+            <img
+              data-alt-src="./Assets/images/11promax2.png"
+              src="./Assets/images/apple11pro.png"
+              alt=""
+              class="swap product__img"
+            />
+
+            <div
+              class="countdown countdown--has-labels text-xl js-countdown"
+              data-timer="1044000"
+              data-labels="D, H, M, S"
+            ></div>
+
+            <span class="product__name">iPhone 11 Pro Max</span>
+            <del>
+              <span class="product__price">UGX 2,400,000</span>
+            </del>
+            <ins>
+              <span class="product__price">UGX 2,100,000</span>
+            </ins>
+            <div
+              class="rateit"
+              data-rateit-value="1"
+              data-rateit-ispreset="true"
+              data-rateit-readonly="true"
+            ></div>
+
+            <button
+              class="snipcart-add-item add-to-cart"
+              data-item-id="starry-night"
+              data-item-price="2100000"
+              data-item-url="https://mocki.io/v1/c4774914-c671-46be-aa29-6b359e4b3297"
+              data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
+              data-item-image="./Assets/images/apple11pro.png"
+              data-item-name="Apple IPhone 11 Pro Max"
+              data-item-custom1-name="Color"
+              data-item-custom1-options="Black|Brown|Gold"
+            >
+              <div class="default">Add to cart</div>
+              <div class="success">Added</div>
+              <div class="cart">
+                <div>
+                  <div></div>
+                  <div></div>
                 </div>
-                <div class="dots"></div>
-              </button>
-            </a>
+              </div>
+              <div class="dots"></div>
+            </button>
           </article>
 
           <article class="product">
             <div class="product__sale">Sale</div>
-            <img src="assets/img/featured3.png" alt="" class="product__img" />
-            <span class="product__name">Nike Free RN</span>
-            <span class="product__price">$149.99</span>
-            <a
-              href="#"
-              class="add-to-cart button-light"
-              data-name="Nike-Free-RN"
-              data-price="149.99"
-              >Add to Cart <i class="bx bx-right-arrow-alt button-icon"></i
-            ></a>
+
+            <img
+              data-alt-src="./Assets/images/11promax2.png"
+              src="./Assets/images/apple11pro.png"
+              alt=""
+              class="swap product__img"
+            />
+
+            <div
+              class="countdown countdown--has-labels text-xl js-countdown"
+              data-timer="1044000"
+              data-labels="D, H, M, S"
+            ></div>
+
+            <span class="product__name">iPhone 11 Pro Max</span>
+            <del>
+              <span class="product__price">UGX 2,400,000</span>
+            </del>
+            <ins>
+              <span class="product__price">UGX 2,100,000</span>
+            </ins>
+            <div
+              class="rateit"
+              data-rateit-value="1"
+              data-rateit-ispreset="true"
+              data-rateit-readonly="true"
+            ></div>
+
+            <button
+              class="snipcart-add-item add-to-cart"
+              data-item-id="starry-night"
+              data-item-price="2100000"
+              data-item-url="https://mocki.io/v1/c4774914-c671-46be-aa29-6b359e4b3297"
+              data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
+              data-item-image="./Assets/images/apple11pro.png"
+              data-item-name="Apple IPhone 11 Pro Max"
+              data-item-custom1-name="Color"
+              data-item-custom1-options="Black|Brown|Gold"
+            >
+              <div class="default">Add to cart</div>
+              <div class="success">Added</div>
+              <div class="cart">
+                <div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+              <div class="dots"></div>
+            </button>
           </article>
         </div>
       </section>
 
       <!--===== COLLECTION =====-->
       <section class="collection section">
+        <h2 class="section-title">BEST SELLERS</h2>
+
         <div class="collection__container bd-grid">
           <div class="collection__card">
             <div class="collection__data">
               <h3 class="collection__name">Gaming</h3>
-              <p class="collection__description">New collection 2020</p>
-              <a href="" class="button-light"
-                >Buy now <i class="bx bx-right-arrow-alt button-icon"></i
-              ></a>
+              <p class="collection__description">New collection 2021</p>
+              <button class="add-to-cart">
+                <a href=""> Buy Now</a>
+              </button>
             </div>
 
             <img
@@ -350,10 +417,10 @@
           <div class="collection__card">
             <div class="collection__data">
               <h3 class="collection__name">Networking.</h3>
-              <p class="collection__description">New collection 2020</p>
-              <a href="" class="button-light"
-                >Buy now <i class="bx bx-right-arrow-alt button-icon"></i
-              ></a>
+              <p class="collection__description">New collection 2021</p>
+              <button class="add-to-cart">
+                <a href=""> Buy Now</a>
+              </button>
             </div>
 
             <img
@@ -365,45 +432,149 @@
         </div>
       </section>
 
-      <!--===== WOMEN SNEAKERS =====-->
-      <section class="women section" id="women">
-        <h2 class="section-title">WOMEN SNEAKERS</h2>
+      <!--===== ROUTERS =====-->
+      <section class="router section" id="router">
+        <h2 class="section-title">ROUTERS AND MODEMS.</h2>
 
-        <div class="women__container bd-grid">
+        <div class="router__container bd-grid">
           <article class="product">
-            <img src="assets/img/women1.png" alt="" class="product__img" />
-            <span class="product__name">Nike Free TR</span>
-            <span class="product__price">$129.90</span>
-            <a href="#" class="button-light"
-              >Add to Cart <i class="bx bx-right-arrow-alt button-icon"></i
-            ></a>
+            <img
+              data-alt-src="./Assets/images/11promax2.png"
+              src="./Assets/images/apple11pro.png"
+              alt=""
+              class="swap product__img"
+            />
+
+            <span class="product__name">iPhone 11 Pro Max</span>
+
+            <span class="product__price">UGX 2,400,000</span>
+
+            <button
+              class="snipcart-add-item add-to-cart"
+              data-item-id="starry-night"
+              data-item-price="2100000"
+              data-item-url="https://mocki.io/v1/c4774914-c671-46be-aa29-6b359e4b3297"
+              data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
+              data-item-image="./Assets/images/apple11pro.png"
+              data-item-name="Apple IPhone 11 Pro Max"
+              data-item-custom1-name="Color"
+              data-item-custom1-options="Black|Brown|Gold"
+            >
+              <div class="default">Add to cart</div>
+              <div class="success">Added</div>
+              <div class="cart">
+                <div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+              <div class="dots"></div>
+            </button>
           </article>
 
           <article class="product">
-            <img src="assets/img/women2.png" alt="" class="product__img" />
-            <span class="product__name">Nike Flyknit</span>
-            <span class="product__price">$129.90</span>
-            <a href="#" class="button-light"
-              >Add to Cart <i class="bx bx-right-arrow-alt button-icon"></i
-            ></a>
+            <img
+              data-alt-src="./Assets/images/11promax2.png"
+              src="./Assets/images/apple11pro.png"
+              alt=""
+              class="swap product__img"
+            />
+
+            <span class="product__name">iPhone 11 Pro Max</span>
+
+            <span class="product__price">UGX 2,400,000</span>
+
+            <button
+              class="snipcart-add-item add-to-cart"
+              data-item-id="starry-night"
+              data-item-price="2100000"
+              data-item-url="https://mocki.io/v1/c4774914-c671-46be-aa29-6b359e4b3297"
+              data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
+              data-item-image="./Assets/images/apple11pro.png"
+              data-item-name="Apple IPhone 11 Pro Max"
+              data-item-custom1-name="Color"
+              data-item-custom1-options="Black|Brown|Gold"
+            >
+              <div class="default">Add to cart</div>
+              <div class="success">Added</div>
+              <div class="cart">
+                <div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+              <div class="dots"></div>
+            </button>
           </article>
 
           <article class="product">
-            <img src="assets/img/women3.png" alt="" class="product__img" />
-            <span class="product__name">Nike GS Pink</span>
-            <span class="product__price">$129.90</span>
-            <a href="#" class="button-light"
-              >Add to Cart <i class="bx bx-right-arrow-alt button-icon"></i
-            ></a>
+            <img
+              data-alt-src="./Assets/images/11promax2.png"
+              src="./Assets/images/apple11pro.png"
+              alt=""
+              class="swap product__img"
+            />
+
+            <span class="product__name">iPhone 11 Pro Max</span>
+
+            <span class="product__price">UGX 2,400,000</span>
+
+            <button
+              class="snipcart-add-item add-to-cart"
+              data-item-id="starry-night"
+              data-item-price="2100000"
+              data-item-url="https://mocki.io/v1/c4774914-c671-46be-aa29-6b359e4b3297"
+              data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
+              data-item-image="./Assets/images/apple11pro.png"
+              data-item-name="Apple IPhone 11 Pro Max"
+              data-item-custom1-name="Color"
+              data-item-custom1-options="Black|Brown|Gold"
+            >
+              <div class="default">Add to cart</div>
+              <div class="success">Added</div>
+              <div class="cart">
+                <div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+              <div class="dots"></div>
+            </button>
           </article>
 
           <article class="product">
-            <img src="assets/img/women4.png" alt="" class="product__img" />
-            <span class="product__name">Nike Get 5</span>
-            <span class="product__price">$129.90</span>
-            <a href="#" class="button-light"
-              >Add to Cart <i class="bx bx-right-arrow-alt button-icon"></i
-            ></a>
+            <img
+              data-alt-src="./Assets/images/11promax2.png"
+              src="./Assets/images/apple11pro.png"
+              alt=""
+              class="swap product__img"
+            />
+
+            <span class="product__name">iPhone 11 Pro Max</span>
+
+            <span class="product__price">UGX 2,400,000</span>
+
+            <button
+              class="snipcart-add-item add-to-cart"
+              data-item-id="starry-night"
+              data-item-price="2100000"
+              data-item-url="https://mocki.io/v1/c4774914-c671-46be-aa29-6b359e4b3297"
+              data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
+              data-item-image="./Assets/images/apple11pro.png"
+              data-item-name="Apple IPhone 11 Pro Max"
+              data-item-custom1-name="Color"
+              data-item-custom1-options="Black|Brown|Gold"
+            >
+              <div class="default">Add to cart</div>
+              <div class="success">Added</div>
+              <div class="cart">
+                <div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+              <div class="dots"></div>
+            </button>
           </article>
         </div>
       </section>
@@ -412,8 +583,8 @@
       <section class="offer section">
         <div class="offer__container bd-grid">
           <div class="offer__data">
-            <h3 class="offer__title">50% OFF</h3>
-            <p class="offer__description">In Adidas Superstar sneakers</p>
+            <h3 class="offer__title">50% OFF DELIVERY</h3>
+            <p class="offer__description">In All Juniper Gadget Purchase.</p>
             <a href="#" class="button">Shop Now</a>
           </div>
 
@@ -421,46 +592,126 @@
         </div>
       </section>
 
-      <!--===== NEW COLLECTION =====-->
+      <!--===== BRAND COLLECTION =====-->
       <section class="new section" id="new">
-        <h2 class="section-title">NEW COLLECTION</h2>
+        <h2 class="section-title">BRAND COLLECTION</h2>
 
         <div class="new__container bd-grid">
-          <div class="new__mens">
-            <img src="assets/img/new1.png" alt="" class="new__mens-img" />
-            <h3 class="new__title">Mens Shoes</h3>
-            <span class="new__preci">From $90</span>
-            <a href="#" class="button-light"
-              >View Collection <i class="bx bx-right-arrow-alt button-icon"></i
-            ></a>
+          <div class="new__brands">
+            <img src="assets/img/new1.png" alt="" class="new__brands-img" />
+            <h3 class="new__title">CISCO </h3>
+            <span class="new__preci">From UGX 200,000</span>
+            <button class="add-to-cart">
+              <a href=""> View Collection</a>
+            </button>
           </div>
 
           <div class="new__product">
             <div class="new__product-card">
               <img src="assets/img/new2.png" alt="" class="new__product-img" />
               <div class="new__product-overlay">
-                <a href="#" class="button">Add to Cart</a>
+                <button
+                  class="snipcart-add-item add-to-cart"
+                  data-item-id="starry-night"
+                  data-item-price="2100000"
+                  data-item-url="https://mocki.io/v1/c4774914-c671-46be-aa29-6b359e4b3297"
+                  data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
+                  data-item-image="./Assets/images/apple11pro.png"
+                  data-item-name="Apple IPhone 11 Pro Max"
+                  data-item-custom1-name="Color"
+                  data-item-custom1-options="Black|Brown|Gold"
+                >
+                  <div class="default">Add to cart</div>
+                  <div class="success">Added</div>
+                  <div class="cart">
+                    <div>
+                      <div></div>
+                      <div></div>
+                    </div>
+                  </div>
+                  <div class="dots"></div>
+                </button>
               </div>
             </div>
 
             <div class="new__product-card">
               <img src="assets/img/new3.png" alt="" class="new__product-img" />
               <div class="new__product-overlay">
-                <a href="#" class="button">Add to Cart</a>
+                <button
+                  class="snipcart-add-item add-to-cart"
+                  data-item-id="starry-night"
+                  data-item-price="2100000"
+                  data-item-url="https://mocki.io/v1/c4774914-c671-46be-aa29-6b359e4b3297"
+                  data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
+                  data-item-image="./Assets/images/apple11pro.png"
+                  data-item-name="Apple IPhone 11 Pro Max"
+                  data-item-custom1-name="Color"
+                  data-item-custom1-options="Black|Brown|Gold"
+                >
+                  <div class="default">Add to cart</div>
+                  <div class="success">Added</div>
+                  <div class="cart">
+                    <div>
+                      <div></div>
+                      <div></div>
+                    </div>
+                  </div>
+                  <div class="dots"></div>
+                </button>
               </div>
             </div>
 
             <div class="new__product-card">
               <img src="assets/img/new4.png" alt="" class="new__product-img" />
               <div class="new__product-overlay">
-                <a href="#" class="button">Add to Cart</a>
+                <button
+                  class="snipcart-add-item add-to-cart"
+                  data-item-id="starry-night"
+                  data-item-price="2100000"
+                  data-item-url="https://mocki.io/v1/c4774914-c671-46be-aa29-6b359e4b3297"
+                  data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
+                  data-item-image="./Assets/images/apple11pro.png"
+                  data-item-name="Apple IPhone 11 Pro Max"
+                  data-item-custom1-name="Color"
+                  data-item-custom1-options="Black|Brown|Gold"
+                >
+                  <div class="default">Add to cart</div>
+                  <div class="success">Added</div>
+                  <div class="cart">
+                    <div>
+                      <div></div>
+                      <div></div>
+                    </div>
+                  </div>
+                  <div class="dots"></div>
+                </button>
               </div>
             </div>
 
             <div class="new__product-card">
               <img src="assets/img/new5.png" alt="" class="new__product-img" />
               <div class="new__product-overlay">
-                <a href="#" class="button">Add to Cart</a>
+                <button
+                  class="snipcart-add-item add-to-cart"
+                  data-item-id="starry-night"
+                  data-item-price="2100000"
+                  data-item-url="https://mocki.io/v1/c4774914-c671-46be-aa29-6b359e4b3297"
+                  data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
+                  data-item-image="./Assets/images/apple11pro.png"
+                  data-item-name="Apple IPhone 11 Pro Max"
+                  data-item-custom1-name="Color"
+                  data-item-custom1-options="Black|Brown|Gold"
+                >
+                  <div class="default">Add to cart</div>
+                  <div class="success">Added</div>
+                  <div class="cart">
+                    <div>
+                      <div></div>
+                      <div></div>
+                    </div>
+                  </div>
+                  <div class="dots"></div>
+                </button>
               </div>
             </div>
           </div>
@@ -473,10 +724,10 @@
           <div>
             <h3 class="newsletter__title">
               Subscribe And Get <br />
-              10% OFF
+              50% OFF
             </h3>
             <p class="newsletter__description">
-              Get 10% discount for all products
+              Get 50% discount for all products shipping.
             </p>
           </div>
 
@@ -497,9 +748,8 @@
       <div class="footer__container bd-grid">
         <div class="footer__box">
           <h3 class="footer__title">
-            <img src="./Assets/images/LOGO TRANSPARENT (1).png" alt="logo" />
+            <img src="./Assets/images/output-onlinepngtools.png" alt="logo" />
           </h3>
-          <p class="footer__description">Your One-Stop Utilities Hub.</p>
         </div>
 
         <div class="footer__box">
@@ -507,34 +757,135 @@
           <ul>
             <li><a href="#home" class="footer__link">Home</a></li>
             <li><a href="#featured" class="footer__link">Featured</a></li>
-            <li><a href="#women" class="footer__link">Women</a></li>
+            <li><a href="./shop.html" class="footer__link">Shop</a></li>
             <li><a href="#new" class="footer__link">New</a></li>
           </ul>
         </div>
 
         <div class="footer__box">
-          <h3 class="footer__title">SUPPORT</h3>
-          <ul>
-            <li><a href="#" class="footer__link">Product Help</a></li>
-            <li><a href="#" class="footer__link">Customer Care</a></li>
-            <li><a href="#" class="footer__link">Authorized service</a></li>
-          </ul>
+          <h3 class="footer__title">GET IN TOUCH</h3>
+
+          <p class="footer__description">
+            <svg
+              class="social__logo"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"
+              />
+            </svg>
+            E-tower- Kampala Road - <br />Room B14 - Basement.
+          </p>
+
+          <p class="footer__description">
+            <svg
+              class="social__logo"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 22.621l-3.521-6.795c-.008.004-1.974.97-2.064 1.011-2.24 1.086-6.799-7.82-4.609-8.994l2.083-1.026-3.493-6.817-2.106 1.039c-7.202 3.755 4.233 25.982 11.6 22.615.121-.055 2.102-1.029 2.11-1.033z"
+              />
+            </svg>
+            +256 706 308220
+          </p>
+
+          <p class="footer__description">
+            <svg
+              class="social__logo"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 14h-7v-8h2v6h5v2z"
+              />
+            </svg>
+            Sun:Closed, Mon-Fri:8am-6pm,<br />
+            Sat:10am-4pm.
+          </p>
         </div>
 
         <div class="footer__box">
-          <a href="#" class="footer__social"><i class="bx bxl-facebook"></i></a>
+          <a href="#" class="footer__social">
+            <svg
+              class="social__logo"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"
+              />
+            </svg>
+          </a>
           <a href="#" class="footer__social"
-            ><i class="bx bxl-instagram"></i
-          ></a>
-          <a href="#" class="footer__social"><i class="bx bxl-twitter"></i></a>
-          <a href="#" class="footer__social"><i class="bx bxl-google"></i></a>
+            ><svg
+              class="social__logo"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+              />
+            </svg>
+          </a>
+
+          <a href="#" class="footer__social"
+            ><svg
+              class="social__logo"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+              />
+            </svg>
+          </a>
+          <a href="#" class="footer__social"
+            ><svg
+              class="social__logo"
+              width="24"
+              height="24"
+              xmlns="http://www.w3.org/2000/svg"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+            >
+              <path
+                d="M22.288 21h-20.576c-.945 0-1.712-.767-1.712-1.712v-13.576c0-.945.767-1.712 1.712-1.712h20.576c.945 0 1.712.767 1.712 1.712v13.576c0 .945-.767 1.712-1.712 1.712zm-10.288-6.086l-9.342-6.483-.02 11.569h18.684v-11.569l-9.322 6.483zm8.869-9.914h-17.789l8.92 6.229s6.252-4.406 8.869-6.229z"
+              />
+            </svg>
+          </a>
         </div>
       </div>
-      <p class="footer__copy">&#169; 2020 The Network. All rights reserved</p>
+      <p class="footer__copy">
+        &#169; 2020 The Network Company. All rights reserved
+      </p>
     </footer>
 
     <!--===== MAIN JS =====-->
     <script src="./Assets/JS/jquery.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
     <script src="./Assets/JS/jquery.rateit.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
     <script src="./Assets/JS/typewriter.js"></script>
@@ -545,17 +896,28 @@
     <script src="./Assets/JS/jquery.animateTyping.js"></script>
     <script src="./Assets/JS/placeholderTypewriter.js"></script>
     <script src="./Assets/JS/cookieBubble.js"></script>
+    <script src="./Assets/JS/Util.js"></script>
     <script src="./Assets/JS/countdown.jquery.min.js"></script>
+    <script src="./Assets/JS/countdowncody.js"></script>
 
     <script>
-      new TypeWriter("#typing", ["Text 1", "Text 2", "Text 3"], {
-        autoStart: false,
-        writeDelay: 60,
-        deleteDelay: 40,
-        holdOnceWritten: 1000,
-        holdOnceDeleted: 1000,
-        stopAfterOnce: true,
-      });
+      new TypeWriter(
+        "#typing",
+        [
+          "What are you looking for?",
+          "Routers,Modems",
+          "Laptops,Printers",
+          "Access Point Systems,Cameras.",
+        ],
+        {
+          autoStart: false,
+          writeDelay: 60,
+          deleteDelay: 40,
+          holdOnceWritten: 1000,
+          holdOnceDeleted: 1000,
+          stopAfterOnce: true,
+        }
+      );
 
       (function ($) {
         $.cookieBubble({
@@ -573,22 +935,16 @@
             "We use cookies to personalize your experience. By continuing to visit this website you agree to our use of cookies.",
         });
       })(jQuery);
-
-      $(function () {
-        $("#countdown").countdown({
-          year: 2022, // YYYY Format
-
-          month: 1, // 1-12
-
-          day: 1, // 1-31
-
-          hour: 0, // 24 hour format 0-23
-
-          minute: 0, // 0-59
-
-          second: 0, // 0-59
-        });
-      });
     </script>
+    <script
+      async
+      src="https://cdn.snipcart.com/themes/v3.1.0/default/snipcart.js"
+    ></script>
+    <div
+      hidden
+      id="snipcart"
+      data-api-key="MjFkYjc2NjQtZDE5NS00M2ViLWExNGItMWQ3ODE4N2FiYTM1NjM3NTQwMDk4ODMwOTQyNzE4"
+      data-config-modal-style="side"
+    ></div>
   </body>
 </html>

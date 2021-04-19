@@ -1,0 +1,85 @@
+/* -------------------------------- File#: _1_countdown Title: CountDown Descr: Widget to display a timer Usage: codyhouse.co/license -------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+:root {
+    --space-unit: 1em;
+    --space-xs: calc(0.5 * var(--space-unit));
+    --space-xxxxs: calc(0.125 * var(--space-unit));
+    --space-xxxs: calc(0.25 * var(--space-unit));
+    --timer-gap: var(--space-xxxs);
+    --color-contrast-medium: rgb(220, 20, 60);
+}
+
+.countdown {
+    display: flex;
+    align-items: baseline;
+}
+
+.countdown__timer {
+    display: inline-block;
+}
+
+.countdown__item {
+    display: inline-block;
+}
+
+.countdown__item:nth-of-type(2)::after, .countdown__item:nth-of-type(3)::after {
+    content: ':';
+}
+
+.countdown__value {
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--color-contrast-medium);
+    font-size: 20px;
+}
+
+.countdown--has-labels .countdown__item {
+    margin-right: var(--space-xs);
+    color: var(--color-contrast-medium);
+}
+
+.countdown--has-labels .countdown__item:last-child {
+    margin-right: 0;
+}
+
+.countdown--has-labels .countdown__item::after {
+    content: '';
+}
+
+.countdown--has-labels .countdown__label {
+    font-size: 0.45em;
+}
+
+.countdown--grid .countdown__timer {
+    display: flex;
+    margin-left: calc(-1 * var(--timer-gap));
+}
+
+.countdown--grid .countdown__item {
+    width: 1.6em;
+    text-align: center;
+    padding: var(--space-xxxxs) 0;
+    margin-left: var(--timer-gap);
+}
+
+.countdown--grid .countdown__item::after {
+    content: '';
+}
+
+.countdown--grid .countdown__label {
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.2em;
+    letter-spacing: 0.1em;
+    color: var(--color-contrast-medium);
+}
+
+.js .countdown__fallback {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+}
+
+html:not(.js) .countdown__info {
+    display: none;
+}
