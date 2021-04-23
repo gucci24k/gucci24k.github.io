@@ -1517,3 +1517,261 @@ a:hover {
 .button a {
     color: var(--white-color);
 }
+
+.float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+}
+
+.my-float {
+    margin-top: 10px;
+    fill: #fff;
+}
+
+.add-to-cart:hover {
+    color: #FFF;
+}
+
+.container {
+    overflow: hidden;
+}
+
+.filterDiv {
+    display: none;
+    /* Hidden by default */
+}
+
+/* The "show" class is added to the filtered elements */
+
+.show {
+    display: block;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --select-border: var(--dark-color-light);
+    --select-focus: var(--dark-color);
+    --select-arrow: var(--select-border);
+}
+
+select {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    padding: 0 1em 0 0;
+    margin: 0;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+    z-index: 1;
+    outline: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.select {
+    display: grid;
+    grid-template-areas: "select";
+    align-items: center;
+    position: relative;
+    min-width: 15ch;
+    max-width: 30ch;
+    border: 1px solid var(--select-border);
+    border-radius: 0.25em;
+    padding: 7rem 0 3rem 0;;
+    cursor: pointer;
+    line-height: 1.1;
+   
+}
+
+.select select, .select::after {
+    grid-area: select;
+}
+
+.select:not(.select--multiple)::after {
+    content: "";
+    justify-self: end;
+    width: 0.8em;
+    height: 0.5em;
+    background-color: var(--select-arrow);
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+}
+
+select:focus+.focus {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    border: 2px solid var(--select-focus);
+    border-radius: inherit;
+}
+
+select[multiple] {
+    padding-right: 0;
+    /* * Safari will not reveal an option * unless the select height has room to * show all of it * Firefox and Chrome allow showing * a partial option */
+    height: 6rem;
+    /* * Experimental - styling of selected options * in the multiselect * Not supported crossbrowser */
+}
+
+select[multiple] option {
+    white-space: normal;
+    outline-color: var(--select-focus);
+}
+
+.select--disabled {
+    cursor: not-allowed;
+    background-color: #eee;
+    background-image: linear-gradient(to top, #ddd, #eee 33%);
+}
+
+label {
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.select+label {
+    margin-top: 2rem;
+}
+
+.filter{
+    position: relative;
+    font-size: var(--big-font-size) !important;
+    margin-bottom: var(--mb-4);
+    text-align: center;
+    letter-spacing: .1rem;
+}
+
+Search Active */
+
+body.search-active {
+    overflow: hidden;
+}
+body.search-active .search-input {
+    opacity: 1;
+    transform: none;
+    pointer-events: all;
+}
+body.search-active .icon-close {
+    opacity: 1;
+    transform: rotate(-90deg);
+}
+body.search-active .control {
+    cursor: default;
+}
+body.search-active .control .btn-material {
+    transform: scale(70);
+}
+body.search-active .control .icon-material-search {
+    opacity: 0;
+}
+/* Close Icon */
+.icon-close {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 70px;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+.icon-close:hover {
+    transform: rotate(0);
+}
+/* Search Input */
+.search-input {
+    height: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    margin-top: -40px;
+    pointer-events: none;
+    opacity: 0;
+    transform: translate(40px, 0);
+    transition: all 0.3s ease-in-out;
+}
+.search-input input {
+    color: #fff;
+    font-size: 54px;
+    border: 0;
+    background: transparent;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    outline: 0;
+    font-weight: 200;
+}
+.search-input ::-webkit-input-placeholder {
+    color: #eee;
+}
+.search-input :-moz-placeholder {
+    color: #eee;
+    opacity: 1;
+}
+.search-input ::-moz-placeholder {
+    color: #eee;
+    opacity: 1;
+}
+.search-input :-ms-input-placeholder {
+    color: #eee;
+}
+/* Container */
+.container {
+    padding-right: 50px;
+    padding-left: 50px;
+    position: relative;
+}
+.container.container-dark {
+    background: #22313f;
+    color: #fff;
+}
+/* Control btn */
+.control {
+    cursor: pointer;
+}
+.control .btn-material {
+    position: absolute;
+    top: -30px;
+    width: 60px;
+    height: 60px;
+    right: 60px;
+    border-radius: 100%;
+    box-sizing: border-box;
+    background: #e91e63;
+    outline: 0;
+    transform-origin: 50%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.control .btn-material:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+.control .icon-material-search {
+    color: #fff;
+    position: absolute;
+    top: -10px;
+    right: 78px;
+    transition: opacity 0.3s ease-in-out;
+}
+/* Utilities */
+.p-y-md {
+    padding-top: 2.8rem;
+    padding-bottom: 2.8rem;
+}/* Typo */
