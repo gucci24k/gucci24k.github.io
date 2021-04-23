@@ -1,0 +1,988 @@
+<html
+  lang="en"
+  class="js"
+  style="
+    --color-primary-darker: hsl(220, 90%, 42%);
+    --color-primary-darker-h: 220;
+    --color-primary-darker-s: 90%;
+    --color-primary-darker-l: 42%;
+    --color-primary-dark: hsl(220, 90%, 49%);
+    --color-primary-dark-h: 220;
+    --color-primary-dark-s: 90%;
+    --color-primary-dark-l: 49%;
+    --color-primary: hsl(220, 90%, 56%);
+    --color-primary-h: 220;
+    --color-primary-s: 90%;
+    --color-primary-l: 56%;
+    --color-primary-light: hsl(220, 90%, 63%);
+    --color-primary-light-h: 220;
+    --color-primary-light-s: 90%;
+    --color-primary-light-l: 63%;
+    --color-primary-lighter: hsl(220, 90%, 70%);
+    --color-primary-lighter-h: 220;
+    --color-primary-lighter-s: 90%;
+    --color-primary-lighter-l: 70%;
+    --color-accent-darker: hsl(349, 75%, 36%);
+    --color-accent-darker-h: 349;
+    --color-accent-darker-s: 75%;
+    --color-accent-darker-l: 36%;
+    --color-accent-dark: hsl(349, 75%, 44%);
+    --color-accent-dark-h: 349;
+    --color-accent-dark-s: 75%;
+    --color-accent-dark-l: 44%;
+    --color-accent: hsl(349, 75%, 51%);
+    --color-accent-h: 349;
+    --color-accent-s: 75%;
+    --color-accent-l: 51%;
+    --color-accent-light: hsl(349, 75%, 59%);
+    --color-accent-light-h: 349;
+    --color-accent-light-s: 75%;
+    --color-accent-light-l: 59%;
+    --color-accent-lighter: hsl(349, 75%, 67%);
+    --color-accent-lighter-h: 349;
+    --color-accent-lighter-s: 75%;
+    --color-accent-lighter-l: 67%;
+    --color-black: hsl(240, 8%, 12%);
+    --color-black-h: 240;
+    --color-black-s: 8%;
+    --color-black-l: 12%;
+    --color-white: hsl(0, 0%, 100%);
+    --color-white-h: 0;
+    --color-white-s: 0%;
+    --color-white-l: 100%;
+    --color-success-darker: hsl(94, 48%, 42%);
+    --color-success-darker-h: 94;
+    --color-success-darker-s: 48%;
+    --color-success-darker-l: 42%;
+    --color-success-dark: hsl(94, 48%, 48%);
+    --color-success-dark-h: 94;
+    --color-success-dark-s: 48%;
+    --color-success-dark-l: 48%;
+    --color-success: hsl(94, 48%, 56%);
+    --color-success-h: 94;
+    --color-success-s: 48%;
+    --color-success-l: 56%;
+    --color-success-light: hsl(94, 48%, 65%);
+    --color-success-light-h: 94;
+    --color-success-light-s: 48%;
+    --color-success-light-l: 65%;
+    --color-success-lighter: hsl(94, 48%, 74%);
+    --color-success-lighter-h: 94;
+    --color-success-lighter-s: 48%;
+    --color-success-lighter-l: 74%;
+    --color-error-darker: hsl(349, 75%, 36%);
+    --color-error-darker-h: 349;
+    --color-error-darker-s: 75%;
+    --color-error-darker-l: 36%;
+    --color-error-dark: hsl(349, 75%, 44%);
+    --color-error-dark-h: 349;
+    --color-error-dark-s: 75%;
+    --color-error-dark-l: 44%;
+    --color-error: hsl(349, 75%, 51%);
+    --color-error-h: 349;
+    --color-error-s: 75%;
+    --color-error-l: 51%;
+    --color-error-light: hsl(349, 75%, 59%);
+    --color-error-light-h: 349;
+    --color-error-light-s: 75%;
+    --color-error-light-l: 59%;
+    --color-error-lighter: hsl(349, 75%, 67%);
+    --color-error-lighter-h: 349;
+    --color-error-lighter-s: 75%;
+    --color-error-lighter-l: 67%;
+    --color-warning-darker: hsl(46, 100%, 47%);
+    --color-warning-darker-h: 46;
+    --color-warning-darker-s: 100%;
+    --color-warning-darker-l: 47%;
+    --color-warning-dark: hsl(46, 100%, 50%);
+    --color-warning-dark-h: 46;
+    --color-warning-dark-s: 100%;
+    --color-warning-dark-l: 50%;
+    --color-warning: hsl(46, 100%, 61%);
+    --color-warning-h: 46;
+    --color-warning-s: 100%;
+    --color-warning-l: 61%;
+    --color-warning-light: hsl(46, 100%, 71%);
+    --color-warning-light-h: 46;
+    --color-warning-light-s: 100%;
+    --color-warning-light-l: 71%;
+    --color-warning-lighter: hsl(46, 100%, 80%);
+    --color-warning-lighter-h: 46;
+    --color-warning-lighter-s: 100%;
+    --color-warning-lighter-l: 80%;
+    --color-bg: hsl(0, 0%, 100%);
+    --color-bg-h: 0;
+    --color-bg-s: 0%;
+    --color-bg-l: 100%;
+    --color-contrast-lower: hsl(0, 0%, 95%);
+    --color-contrast-lower-h: 0;
+    --color-contrast-lower-s: 0%;
+    --color-contrast-lower-l: 95%;
+    --color-contrast-low: hsl(240, 1%, 83%);
+    --color-contrast-low-h: 240;
+    --color-contrast-low-s: 1%;
+    --color-contrast-low-l: 83%;
+    --color-contrast-medium: hsl(240, 1%, 48%);
+    --color-contrast-medium-h: 240;
+    --color-contrast-medium-s: 1%;
+    --color-contrast-medium-l: 48%;
+    --color-contrast-high: hsl(240, 4%, 20%);
+    --color-contrast-high-h: 240;
+    --color-contrast-high-s: 4%;
+    --color-contrast-high-l: 20%;
+    --color-contrast-higher: hsl(240, 8%, 12%);
+    --color-contrast-higher-h: 240;
+    --color-contrast-higher-s: 8%;
+    --color-contrast-higher-l: 12%;
+  "
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      document.getElementsByTagName("html")[0].className += " js";
+    </script>
+
+    <link
+      id="cd-base-part-1"
+      rel="stylesheet"
+      href="https://codyhouse.co/app/assets/css/base-part-1.css?v=39"
+    />
+    <style id="forms-style">
+      :root {
+        --form-control-padding-x: var(--space-xs);
+        --form-control-padding-y: var(--space-xxs);
+        --form-control-radius: 0.25em;
+      }
+      .form-control {
+        line-height: 1.2;
+        background-color: var(--color-bg);
+        border: 2px solid var(--color-contrast-low);
+        transition: 0.2s;
+      }
+      .form-control:focus {
+        border-color: var(--color-primary);
+        box-shadow: 0px 0px 0px 2px
+          hsla(
+            var(--color-primary-h),
+            var(--color-primary-s),
+            var(--color-primary-l),
+            0.2
+          );
+        outline: none;
+      }
+      .form-control[aria-invalid="true"],
+      .form-control--error {
+        border-color: var(--color-error);
+      }
+      .form-control[aria-invalid="true"]:focus,
+      .form-control--error:focus {
+        border-color: var(--color-error);
+        box-shadow: 0px 0px 0px 2px
+          hsla(
+            var(--color-error-h),
+            var(--color-error-s),
+            var(--color-error-l),
+            0.2
+          );
+      }
+      .form-control--disabled,
+      .form-control[disabled],
+      .form-control[readonly] {
+        cursor: not-allowed;
+      }
+      .form-label {
+        font-size: var(--text-sm);
+      }
+      .form-legend {
+        font-size: var(--text-md);
+      }
+      .form-control::placeholder {
+        opacity: 1;
+        color: var(--color-contrast-medium);
+      }
+      .form-error-msg {
+        background-color: hsla(
+          var(--color-error-h),
+          var(--color-error-s),
+          var(--color-error-l),
+          0.2
+        );
+        color: inherit;
+        border-radius: var(--radius-md);
+        padding: var(--space-xs);
+      }
+    </style>
+    <style id="buttons-style">
+      :root {
+        --btn-font-size: 1em;
+        --btn-padding-x: var(--space-sm);
+        --btn-padding-y: var(--space-xxs);
+        -btn-radius: 0.25em;
+      }
+      .btn {
+        line-height: 1.2;
+        box-shadow: var(--shadow-xs);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        transition: 0.2s;
+        will-change: transform;
+      }
+      .btn:hover {
+        cursor: pointer;
+        box-shadow: var(--shadow-sm);
+      }
+      .btn:focus {
+        box-shadow: 0px 0px 0px 2px
+          hsla(
+            var(--color-contrast-higher-h),
+            var(--color-contrast-higher-s),
+            var(--color-contrast-higher-l),
+            0.15
+          );
+        outline: none;
+      }
+      .btn:active {
+        transform: translateY(2px);
+      }
+      .btn--primary {
+        background-color: var(--color-primary);
+        color: var(--color-white);
+      }
+      .btn--primary:hover {
+        background-color: var(--color-primary-dark);
+      }
+      .btn--primary:focus {
+        box-shadow: 0px 0px 0px 2px
+          hsla(
+            var(--color-primary-h),
+            var(--color-primary-s),
+            var(--color-primary-l),
+            0.2
+          );
+      }
+      .btn--subtle {
+        background-color: var(--color-contrast-lower);
+        color: var(--color-contrast-higher);
+      }
+      .btn--accent {
+        background-color: var(--color-accent);
+        color: var(--color-white);
+      }
+      .btn--accent:hover {
+        background-color: var(--color-accent-dark);
+      }
+      .btn--accent:focus {
+        box-shadow: 0px 0px 0px 2px
+          hsla(
+            var(--color-accent-h),
+            var(--color-accent-s),
+            var(--color-accent-l),
+            0.2
+          );
+      }
+      .btn--disabled,
+      .btn[disabled],
+      .btn[readonly] {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+      .btn--sm {
+        font-size: 0.8em;
+      }
+      .btn--md {
+        font-size: 1.2em;
+      }
+      .btn--lg {
+        font-size: 1.4em;
+      }
+    </style>
+    <style id="spacing-style">
+      @media (min-width: 64rem) {
+        :root {
+          --space-unit: 1.25em;
+        }
+      }
+    </style>
+    <style id="typography-style">
+      :root {
+        --font-primary: Inter, system-ui, sans-serif;
+        --text-base-size: 1em;
+        --text-scale-ratio: 1.2;
+        --text-unit: 1em;
+        --body-line-height: 1.4;
+        --heading-line-height: 1.2;
+        --font-primary-capital-letter: 1;
+      }
+      :root,
+      * {
+        --text-xs: calc(
+          (var(--text-unit) / var(--text-scale-ratio)) / var(--text-scale-ratio)
+        );
+        --text-sm: calc(var(--text-xs) * var(--text-scale-ratio));
+        --text-md: calc(
+          var(--text-sm) * var(--text-scale-ratio) * var(--text-scale-ratio)
+        );
+        --text-lg: calc(var(--text-md) * var(--text-scale-ratio));
+        --text-xl: calc(var(--text-lg) * var(--text-scale-ratio));
+        --text-xxl: calc(var(--text-xl) * var(--text-scale-ratio));
+        --text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio));
+        --text-xxxxl: calc(var(--text-xxxl) * var(--text-scale-ratio));
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: var(--font-primary);
+        font-weight: 700;
+      }
+      @media (min-width: 64rem) {
+        :root {
+          --text-base-size: 1.25em;
+          --text-scale-ratio: 1.25;
+        }
+      }
+      mark {
+        background-color: hsla(
+          var(--color-accent-h),
+          var(--color-accent-s),
+          var(--color-accent-l),
+          0.2
+        );
+        color: inherit;
+      }
+      .text-component {
+        --line-height-multiplier: 1;
+        --text-vspace-multiplier: 1;
+      }
+      .text-component blockquote {
+        padding-left: 1em;
+        border-left: 4px solid var(--color-contrast-low);
+      }
+      .text-component hr {
+        background: var(--color-contrast-low);
+        height: 1px;
+      }
+      .text-component figcaption {
+        font-size: var(--text-sm);
+        color: var(--color-contrast-medium);
+      }
+      .article {
+        --body-line-height: 1.58;
+        --text-vspace-multiplier: 1.2;
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://app.snipcart.com" />
+    <link rel="preconnect" href="https://cdn.snipcart.com" />
+    <!-- ===== BOX ICONS ===== -->
+
+    <link rel="stylesheet" href="../boxicons-2.0.7/css/boxicons.min.css" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/24bc2ca546.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- ===== CSS ===== -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.snipcart.com/themes/v3.1.0/default/snipcart.css"
+    />
+    <link rel="stylesheet" href="./Assets/CSS/styles.css" />
+
+    <link rel="stylesheet" href="./Assets/CSS/minimal.css" />
+    <link rel="stylesheet" href="./Assets/CSS/rateit.css" />
+    <link rel="stylesheet" href="./Assets/CSS/fliccckity.css" />
+    <link rel="stylesheet" href="./Assets/CSS/fullscreen.css" />
+    <link rel="stylesheet" href="./Assets/CSS/cookieBubble.css" />
+    <link rel="stylesheet" href="./Assets/CSS/countdowntimer.css" />
+    <link rel="stylesheet" href="./Assets/CSS/countdowncody.css" />
+    <link rel="stylesheet" href="./Assets/CSS/jquery.jqZoom.css" />
+
+    <noscript>
+      <link
+        id="cd-base-part-1"
+        rel="stylesheet"
+        href="https://codyhouse.co/app/assets/css/base-part-1.css?v=39"
+      />
+    </noscript>
+
+    <script>
+      if ("CSS" in window && CSS.supports("color", "var(--color-var)")) {
+        document.write(
+          '<link rel="stylesheet" href="https://codyhouse.co/app/components/source/product-v2/dist/product-v2.css?v=39">'
+        );
+      } else {
+        document.write(
+          '<link rel="stylesheet" href="https://codyhouse.co/app/components/source/product-v2/dist/product-v2-ie.css">'
+        );
+      }
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://codyhouse.co/app/components/source/product-v2/dist/product-v2.css?v=39"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://codyhouse.co/app/components/source/product-v2/dist/product-v2.css?v=39"
+      />
+    </noscript>
+
+    <link
+      rel="stylesheet"
+      href="https://codyhouse.co/app/assets/css/app-demo.css"
+    />
+  </head>
+  <body>
+    <!--===== HEADER =====-->
+    <header class="l-header" id="header">
+      <nav class="nav bd-grid">
+        <div class="nav__toggle" id="nav-toggle">
+          <svg
+            width="24"
+            height="24"
+            xmlns="http://www.w3.org/2000/svg"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+          >
+            <path
+              d="M24 18v1h-24v-1h24zm0-6v1h-24v-1h24zm0-6v1h-24v-1h24z"
+              fill="#1040e2"
+            />
+            <path d="M24 19h-24v-1h24v1zm0-6h-24v-1h24v1zm0-6h-24v-1h24v1z" />
+          </svg>
+        </div>
+
+        <a href="#" class="nav__logo"
+          ><img src="./Assets/images/LOGO TRANSPARENT (1).png" alt="logo"
+        /></a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="./index.html" class="nav__link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="./index.html#featured" class="nav__link">Featured</a>
+            </li>
+            <li class="nav__item">
+              <a href="./shop.html" class="nav__link active">Shop</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">Services</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link">
+                <!----- close button ----->
+                <div class="close">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
+                    />
+                  </svg>
+                </div>
+
+                <!---- search field ------->
+                <div class="search">
+                  <svg
+                    class="search__svg"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z"
+                    />
+                  </svg>
+
+                  <input type="text" class="input" id="typing" />
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav__shop">
+          <svg
+            class="snipcart-checkout"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M10 19.5c0 .829-.672 1.5-1.5 1.5s-1.5-.671-1.5-1.5c0-.828.672-1.5 1.5-1.5s1.5.672 1.5 1.5zm3.5-1.5c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zm1.336-5l1.977-7h-16.813l2.938 7h11.898zm4.969-10l-3.432 12h-12.597l.839 2h13.239l3.474-12h1.929l.743-2h-4.195z"
+            />
+          </svg>
+          <span class="snipcart-items-count"></span>
+        </div>
+      </nav>
+    </header>
+
+    <div
+      class="cd-demo cd-demo-container cd-demo-max-width-adaptive-lg cd-demo-padding-y-xl js-cd-demo"
+    >
+      <section class="x-rwk js-product-v2 featured section">
+        <div class="x-n gap-md">
+          <div class="x-tj x-np x-dk">
+            <div class="thumbslide js-thumbslide">
+              <div
+                class="slideshow js-product-v2__slideshow x-nzd x-nzl"
+                data-control="hover"
+              >
+                <p class="sr-only">Slideshow Items</p>
+                <ul class="x-nzc">
+                  <li
+                    class="slideshow__item bg js-slideshow__item "
+                    data-thumb="./Assets/images/24-Port Switches/D-Link 24 Port Fast Ethernet WebSmart Switch (DES-1210-28) 1.jpg"
+                    id="item-Black"
+                  >
+                    <figure class="x-vb x-db x-pb x-vk x-vj">
+                      <div class="x-rfd x-db js-img-mag">
+                        <img
+                          class="x-rfv x-db object-cover js-img-mag__asset"
+                          src="./Assets/images/24-Port Switches/D-Link 24 Port Fast Ethernet WebSmart Switch (DES-1210-28) 1.jpg"
+                          alt="Image description"
+                        />
+                      </div>
+                    </figure>
+                  </li>
+                  <li
+                    class="slideshow__item bg js-slideshow__item"
+                    id="item-White"
+                    data-thumb="./Assets/images/24-Port Switches/D-Link 24 Port Fast Ethernet WebSmart Switch (DES-1210-28) 2.jpg"
+                    
+                  >
+                    <figure class="x-vb x-db x-pb x-vk x-vj">
+                      <div class="x-rfd x-db js-img-mag">
+                        <img
+                          class="x-rfv x-db object-cover js-img-mag__asset"
+                          src="./Assets/images/24-Port Switches/D-Link 24 Port Fast Ethernet WebSmart Switch (DES-1210-28) 2.jpg"
+                          alt="Image description"
+                        />
+                      </div>
+                    </figure>
+                  </li>
+                  <li
+                    class="slideshow__item bg js-slideshow__item"
+                    data-thumb="./Assets/images/24-Port Switches/D-Link 24 Port Fast Ethernet WebSmart Switch (DES-1210-28) 2.jpg"
+                    
+                  >
+                    <figure class="x-vb x-db x-pb x-vk x-vj">
+                      <div class="x-rfd x-db js-img-mag">
+                        <img
+                          class="x-rfv x-db object-cover js-img-mag__asset"
+                          src="./Assets/images/24-Port Switches/D-Link 24 Port Fast Ethernet WebSmart Switch (DES-1210-28) 2.jpg"
+                          alt="Image description"
+                        />
+                      </div>
+                    </figure>
+                  </li>
+                </ul>
+                <div
+                  class="sr-only js-slideshow__aria-live"
+                  aria-live="polite"
+                  aria-atomic="true"
+                ></div>
+              </div>
+              <div class="x-rwh" aria-hidden="true">
+                <nav class="thumbslide__nav">
+                  <ol class="x-rwv" style="transform: translateX(0px)">
+                    <li
+                      class="thumbslide__nav-item thumbslide__nav-item--active"
+                      style="width: 90.6px"
+                    >
+                      <img
+                        src="https://codyhouse.co/app/assets/img/product-v2-img-1.jpg"
+                        alt="Image Preview"
+                      />
+                    </li>
+                    <li class="thumbslide__nav-item" style="width: 90.6px">
+                      <img
+                        src="https://codyhouse.co/app/assets/img/product-v2-img-2.jpg"
+                        alt="Image Preview"
+                      />
+                    </li>
+                    <li class="thumbslide__nav-item" style="width: 90.6px">
+                      <img
+                        src="https://codyhouse.co/app/assets/img/product-v2-img-3.jpg"
+                        alt="Image Preview"
+                      />
+                    </li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <div class="x-tj x-nc">
+            <div class="x-sp">
+              <nav class="breadcrumbs text-sm" aria-label="Breadcrumbs">
+                <ol class="flex x-rk gap-xxs">
+                  <li class="x-ndu">
+                    <a href="#0" class="x-tcolor-n">Shop</a>
+                    <span class="x-ucolor-a x-of" aria-hidden="true">/</span>
+                  </li>
+                  <li class="x-ndu">
+                    <a href="#0" class="x-tcolor-n">24-Port Switches.</a>
+                    <span class="x-ucolor-a x-of" aria-hidden="true">/</span>
+                  </li>
+                  <li class="x-ndu" aria-current="page">
+                    D-link 24-Port Fast Ethernet WebSmart Switch (DES-1210-28)
+                  </li>
+                </ol>
+              </nav>
+            </div>
+            <div class="text-component x-hn x-sd">
+              <h1>
+                D-link 24-Port Fast Ethernet WebSmart Switch (DES-1210-28)
+              </h1>
+              <p class="color-contrast-medium">
+                High-performance, scalable, and aﬀordable switch solution ideal
+                for small and medium businesses and the enterprise edge.
+              </p>
+            </div>
+
+            <div class="x-sd">
+              <div class="flex x-r_ x-zu gap-xxs">
+                <button
+                class="snipcart-add-item add-to-cart"
+                data-item-id="DES-1210-28"
+                data-item-price="1000000"
+                data-item-url="./shopdata.json"
+                data-item-description="High-performance, scalable, and aﬀordable switch solution ideal for small and medium businesses and the enterprise edge."
+                data-item-image="./Assets/images/Spotlight Product Images/24-Port Switches/D-Link_24_Port_Fast_Ethernet_WebSmart_Switch__DES-1210-28__1-removebg-preview.png"
+                data-item-name="D-link 24-Port Fast Ethernet WebSmart Switch (DES-1210-28)"
+                data-item-custom1-name="Color"
+                data-item-custom1-options="Black|Brown|Gold"
+              >
+                <div class="default">Add to cart</div>
+                <div class="success">Added</div>
+                <div class="cart">
+                  <div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                </div>
+                <div class="dots"></div>
+              </button>
+              </div>
+            </div>
+            <div class="tabs text-sm js-tabs">
+              <ul
+                class="flex x-rk gap-sm js-tabs__controls"
+                aria-label="Tabs Interface"
+                role="tablist"
+              >
+                <li role="presentation">
+                  <a
+                    href="#proTabPanelDetails"
+                    class="x-rct js-tabs__trigger"
+                    aria-selected="true"
+                    role="tab"
+                    aria-controls="proTabPanelDetails"
+                    id="tab-proTabPanelDetails"
+                    >Details</a
+                  >
+                </li>
+              </ul>
+
+              <div class="js-tabs__panels">
+                <section
+                  id="proTabPanelDetails"
+                  class="x-aa js-tabs__panel"
+                  role="tabpanel"
+                  aria-labelledby="tab-proTabPanelDetails"
+                >
+                  <div class="text-component color-contrast-medium">
+                    <ul>
+                      <li>
+                        Web Smart Switch with 24 10/100Mbps Ports, 2
+                        10/100/1000BASE-T and 2 combo 10/100/1000BASE-T/SFP
+                      </li>
+                      <li>
+                        Security Features: Access Control List, D-Link Safeguard
+                        Engine and Port Security
+                      </li>
+                      <li>
+                        Intuitive Management: SmartConsole or Web-Based GUI,
+                        Built-in MIB Browser for SNMP, D-View 6.0 Module Support
+                        and Compact CLI through Telnet
+                      </li>
+                      <li>
+                        Supports Auto Voice VLAN and DSCP QoS for VoIP
+                        Application
+                      </li>
+                      <li>
+                        PoE support for 802.3af and 802.3at up to 193W total
+                        budget.24-Port Fast Ethernet PoE Smart Managed Switch
+                        with 4 Gigabit Ethernet ports (including 2 Combo SFP)
+                        (24 x PoE ports, smart fans)
+                      </li>
+                    </ul>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!--===== FOOTER =====-->
+    <footer class="footer section">
+      <div class="footer__container bd-grid">
+        <div class="footer__box">
+          <h3 class="footer__title">
+            <img src="./Assets/images/output-onlinepngtools.png" alt="logo" />
+          </h3>
+        </div>
+
+        <div class="footer__box">
+          <h3 class="footer__title">EXPLORE</h3>
+          <ul>
+            <li><a href="#home" class="footer__link">Home</a></li>
+            <li><a href="#featured" class="footer__link">Featured</a></li>
+            <li><a href="./shop.html" class="footer__link">Shop</a></li>
+            <li><a href="#new" class="footer__link">New</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__box" id="footer__box">
+          <h3 class="footer__title">GET IN TOUCH</h3>
+
+          <p class="footer__description">
+            <svg
+              class="social__logo"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"
+              />
+            </svg>
+            E-tower- Kampala Road - <br />Room B14 - Basement.
+          </p>
+
+          <p class="footer__description">
+            <svg
+              class="social__logo"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 22.621l-3.521-6.795c-.008.004-1.974.97-2.064 1.011-2.24 1.086-6.799-7.82-4.609-8.994l2.083-1.026-3.493-6.817-2.106 1.039c-7.202 3.755 4.233 25.982 11.6 22.615.121-.055 2.102-1.029 2.11-1.033z"
+              />
+            </svg>
+            +256 706 308220
+          </p>
+
+          <p class="footer__description">
+            <svg
+              class="social__logo"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 14h-7v-8h2v6h5v2z"
+              />
+            </svg>
+            Sun:Closed, Mon-Fri:8am-6pm,<br />
+            Sat:10am-4pm.
+          </p>
+        </div>
+
+        <div class="footer__box">
+          <a href="#" class="footer__social">
+            <svg
+              class="social__logo"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"
+              />
+            </svg>
+          </a>
+          <a href="#" class="footer__social"
+            ><svg
+              class="social__logo"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+              />
+            </svg>
+          </a>
+
+          <a href="#" class="footer__social"
+            ><svg
+              class="social__logo"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+              />
+            </svg>
+          </a>
+          <a href="#" class="footer__social"
+            ><svg
+              class="social__logo"
+              width="24"
+              height="24"
+              xmlns="http://www.w3.org/2000/svg"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+            >
+              <path
+                d="M22.288 21h-20.576c-.945 0-1.712-.767-1.712-1.712v-13.576c0-.945.767-1.712 1.712-1.712h20.576c.945 0 1.712.767 1.712 1.712v13.576c0 .945-.767 1.712-1.712 1.712zm-10.288-6.086l-9.342-6.483-.02 11.569h18.684v-11.569l-9.322 6.483zm8.869-9.914h-17.789l8.92 6.229s6.252-4.406 8.869-6.229z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <p class="footer__copy">
+        &#169; 2020 The Network Company. All rights reserved
+      </p>
+    </footer>
+    <a
+      href="https://api.whatsapp.com/send?phone=256706308220&text=Hello%21%20TheNetworkCompany%20m%C3%A1s%20ihave%C3%B3n%20an%20inquiry?%202."
+      class="float"
+      target="_blank"
+    >
+      <svg
+        class="my-float2"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"
+        />
+      </svg>
+    </a>
+
+    <script src="./Assets/JS/Util.js"></script>
+    <script>
+      var srcValue =
+        "https://codyhouse.co/app/components/source/product-v2/dist/product-v2.min.js?v=39";
+
+      function loadScript(attr) {
+        var script = document.createElement("script");
+        script.setAttribute(attr, srcValue);
+        script.setAttribute("id", "comp-script");
+        document.body.appendChild(script);
+      }
+      window.location !== window.parent.location
+        ? loadScript("data-src")
+        : loadScript("src");
+    </script>
+    <script src="https://codyhouse.co/app/components/source/product-v2/dist/product-v2.min.js?v=39"></script>
+
+    <!--===== MAIN JS =====-->
+    <script src="./Assets/JS/jquery.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./Assets/JS/jquery.rateit.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+    <script src="./Assets/JS/typewriter.js"></script>
+    <script src="./Assets/JS/script.js"></script>
+    <script src="./Assets/JS/bootstrap.js"></script>
+    <script src="./Assets/JS/flickity.min.js"></script>
+    <script src="./Assets/JS/fullscreen.js"></script>
+    <script src="./Assets/JS/jquery.animateTyping.js"></script>
+    <script src="./Assets/JS/placeholderTypewriter.js"></script>
+    <script src="./Assets/JS/cookieBubble.js"></script>
+    <script src="./Assets/JS/Util.js"></script>
+    <script src="./Assets/JS/countdown.jquery.min.js"></script>
+    <script src="./Assets/JS/countdowncody.js"></script>
+    <script src="./Assets/JS/jquery.jqZoom.js"></script>
+
+    <script>
+      new TypeWriter(
+        "#typing",
+        [
+          "What are you looking for?",
+          "Routers,Modems",
+          "Laptops,Printers",
+          "Access Point Systems,Cameras.",
+        ],
+        {
+          autoStart: false,
+          writeDelay: 60,
+          deleteDelay: 40,
+          holdOnceWritten: 1000,
+          holdOnceDeleted: 1000,
+          stopAfterOnce: true,
+        }
+      );
+
+      (function ($) {
+        $.cookieBubble({
+          messageTextColor: "rgba(0, 0, 0, 1)",
+          buttonText: "Got It",
+          iconColor: "rgba(138, 138, 138, 1)",
+          buttonColor: "rgba(11, 11, 11, 1)",
+          iconVisibility: true,
+          cookiePolicyButtonText: "Read our cookie Policy",
+          cookiePolicyButtonUrl: "http://allaboutcookies.org",
+          cookiePolicyButtonTarget: "_blank",
+          boxPosition: "bottom-center",
+          boxAppearDelay: "3000",
+          messageText:
+            "We use cookies to personalize your experience. By continuing to visit this website you agree to our use of cookies.",
+        });
+      })(jQuery);
+    </script>
+    <script
+      async
+      src="https://cdn.snipcart.com/themes/v3.1.0/default/snipcart.js"
+    ></script>
+    <div
+      hidden
+      id="snipcart"
+      data-api-key="MjFkYjc2NjQtZDE5NS00M2ViLWExNGItMWQ3ODE4N2FiYTM1NjM3NTQwMDk4ODMwOTQyNzE4"
+      data-config-modal-style="side"
+    ></div>
+  </body>
+</html>

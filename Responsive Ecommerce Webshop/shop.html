@@ -36,6 +36,12 @@
     <link rel="stylesheet" href="./Assets/CSS/cookieBubble.css" />
     <link rel="stylesheet" href="./Assets/CSS/countdowntimer.css" />
     <link rel="stylesheet" href="./Assets/CSS/countdowncody.css" />
+
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css"
+    />
   </head>
   <body>
     <!--===== HEADER =====-->
@@ -73,7 +79,7 @@
               <a href="#shop" class="nav__link active">Shop</a>
             </li>
             <li class="nav__item">
-              <a href="" class="nav__link">My Account</a>
+              <a href="" class="nav__link">Services</a>
             </li>
             <li class="nav__item">
               <a class="nav__link">
@@ -131,19 +137,49 @@
 
     <main class="l-main">
       <section class="featured section" id="shop">
+        <div class="section-title">
+          <h2 class="section-title2">Product Filters</h2>
+          <select
+            class="selectpicker show-tick show-menu-arrow"
+            data-live-search="true"
+            multiple
+            title="Product Categories..."
+            data-header="Select a Category"
+            data-max-options="1"
+          >
+            <optgroup label="Switches" >
+              <option data-tokens="5 Port-Switches">5 Port-Switches</option>
+              <option data-tokens="6 Port-Switches">6 Port-Switches</option>
+              <option data-tokens="8 Port-Switches">8 Port-Switches</option>
+              <option data-tokens="16 Port-Switches">16 Port-Switches</option>
+              <option data-tokens="24 Port-Switches">24 Port-Switches</option>
+              <option data-tokens="48 Port-Switches">48 Port-Switches</option>
+            </optgroup>
+            <optgroup label="Smartphones" >
+              <option data-tokens="Samsung A Series">Samsung A Series</option>
+            </optgroup>
+          </select>
+        </div>
+
         <h2 class="section-title">All Products</h2>
         <div class="featured__container bd-grid">
-          <article class="product filterDiv colors fruits">
-            <img
-              data-alt-src="./Assets/images/Spotlight Product Images/24-Port Switches/D-Link_24_Port_Fast_Ethernet_WebSmart_Switch__DES-1210-28__1-removebg-preview.png"
-              src="./Assets/images/Spotlight Product Images/24-Port Switches/D-Link_24_Port_Fast_Ethernet_WebSmart_Switch__DES-1210-28__1-removebg-preview.png"
-              alt=""
-              class="swap product__img"
-            />
-
-            <span class="product__name"
-              >D-link 24-Port Fast Ethernet WebSmart Switch (DES-1210-28)</span
+          <article class="product">
+            <a
+              href="./D-Link 24 Port Fast Ethernet WebSmart Switch (DES-1210-28).html"
+              ><img
+                data-alt-src="./Assets/images/Spotlight Product Images/24-Port Switches/D-Link_24_Port_Fast_Ethernet_WebSmart_Switch__DES-1210-28__1-removebg-preview.png"
+                src="./Assets/images/Spotlight Product Images/24-Port Switches/D-Link_24_Port_Fast_Ethernet_WebSmart_Switch__DES-1210-28__1-removebg-preview.png"
+                alt=""
+                class="swap product__img"
+            /></a>
+            <a
+              href="./D-Link 24 Port Fast Ethernet WebSmart Switch (DES-1210-28).html"
             >
+              <span class="product__name"
+                >D-link 24-Port Fast Ethernet WebSmart Switch
+                (DES-1210-28)</span
+              >
+            </a>
 
             <span class="product__price">UGX 1,000,000</span>
 
@@ -178,10 +214,11 @@
               class="swap product__img"
             />
 
-            <span class="product__name"
-              >D-link 24-Port Fast Ethernet WebSmart Switch (DES-1024D)</span
-            >
-
+            <a href="">
+              <span class="product__name">
+                D-link 24-Port Fast Ethernet WebSmart Switch (DES-1024D)</span
+              >
+            </a>
             <span class="product__price">UGX 350,000</span>
 
             <button
@@ -713,9 +750,16 @@
           </article>
 
           <article class="product">
-            <img data-alt-src="./Assets/images/Spotlight Product Images/05 Port Switches/TP-Link_TL-SF1005D_5-Port_Desktop_Switch1-removebg-preview.png" src="./Assets/images/Spotlight Product Images/05 Port Switches/TP-Link_TL-SF1005D_5-Port_Desktop_Switch1-removebg-preview.png" alt="" class="swap product__img" />
+            <img
+              data-alt-src="./Assets/images/Spotlight Product Images/05 Port Switches/TP-Link_TL-SF1005D_5-Port_Desktop_Switch1-removebg-preview.png"
+              src="./Assets/images/Spotlight Product Images/05 Port Switches/TP-Link_TL-SF1005D_5-Port_Desktop_Switch1-removebg-preview.png"
+              alt=""
+              class="swap product__img"
+            />
 
-            <span class="product__name">TP-Link TL-SF1005D 5-Port Desktop Switch</span>
+            <span class="product__name"
+              >TP-Link TL-SF1005D 5-Port Desktop Switch</span
+            >
 
             <span class="product__price">UGX 90,000</span>
 
@@ -743,9 +787,17 @@
           </article>
 
           <article class="product">
-            <img data-alt-src="./Assets/images/Spotlight Product Images/06 Port Switches/D-Link_6-port-removebg-preview.png" src="./Assets/images/Spotlight Product Images/06 Port Switches/D-Link_6-port-removebg-preview.png" alt="" class="swap product__img" />
+            <img
+              data-alt-src="./Assets/images/Spotlight Product Images/06 Port Switches/D-Link_6-port-removebg-preview.png"
+              src="./Assets/images/Spotlight Product Images/06 Port Switches/D-Link_6-port-removebg-preview.png"
+              alt=""
+              class="swap product__img"
+            />
 
-            <span class="product__name">D-Link 6-port 10/100 Unmanaged Long Range PoE+ Surveillance Switch</span>
+            <span class="product__name"
+              >D-Link 6-port 10/100 Unmanaged Long Range PoE+ Surveillance
+              Switch</span
+            >
 
             <span class="product__price">UGX 5,000,000</span>
 
@@ -773,9 +825,16 @@
           </article>
 
           <article class="product">
-            <img data-alt-src="./Assets/images/Spotlight Product Images/720 MP Cameras/Hikvision_DS-2CE16C0T-IRPF_HD_720p_IR_Bullet_Camera1-removebg-preview.png" src="./Assets/images/Spotlight Product Images/720 MP Cameras/Hikvision_DS-2CE16C0T-IRPF_HD_720p_IR_Bullet_Camera1-removebg-preview.png" alt="" class="swap product__img" />
+            <img
+              data-alt-src="./Assets/images/Spotlight Product Images/720 MP Cameras/Hikvision_DS-2CE16C0T-IRPF_HD_720p_IR_Bullet_Camera1-removebg-preview.png"
+              src="./Assets/images/Spotlight Product Images/720 MP Cameras/Hikvision_DS-2CE16C0T-IRPF_HD_720p_IR_Bullet_Camera1-removebg-preview.png"
+              alt=""
+              class="swap product__img"
+            />
 
-            <span class="product__name">Hikvision DS-2CE16C0T-IR HD 720P IR Bullet Camera</span>
+            <span class="product__name"
+              >Hikvision DS-2CE16C0T-IR HD 720P IR Bullet Camera</span
+            >
 
             <span class="product__price">UGX 120,000</span>
 
@@ -803,9 +862,16 @@
           </article>
 
           <article class="product">
-            <img data-alt-src="./Assets/images/Spotlight Product Images/720 MP Cameras/Hikvision_DS-2CE56C0T-IRPF_HD_720p_Indoor_IR_Turret_Camera1-removebg-preview.png" src="./Assets/images/Spotlight Product Images/720 MP Cameras/Hikvision_DS-2CE56C0T-IRPF_HD_720p_Indoor_IR_Turret_Camera1-removebg-preview.png" alt="" class="swap product__img" />
+            <img
+              data-alt-src="./Assets/images/Spotlight Product Images/720 MP Cameras/Hikvision_DS-2CE56C0T-IRPF_HD_720p_Indoor_IR_Turret_Camera1-removebg-preview.png"
+              src="./Assets/images/Spotlight Product Images/720 MP Cameras/Hikvision_DS-2CE56C0T-IRPF_HD_720p_Indoor_IR_Turret_Camera1-removebg-preview.png"
+              alt=""
+              class="swap product__img"
+            />
 
-            <span class="product__name">Hikvision DS-2CE16C0T-IRPF HD 720p IR Bullet Camera</span>
+            <span class="product__name"
+              >Hikvision DS-2CE16C0T-IRPF HD 720p IR Bullet Camera</span
+            >
 
             <span class="product__price">UGX 80,000</span>
 
@@ -833,9 +899,16 @@
           </article>
 
           <article class="product">
-            <img data-alt-src="./Assets/images/Spotlight Product Images/720 MP Cameras/HIKVISION_DS-2CE16C0T-IT3_Bullet_Camera1-removebg-preview.png" src="./Assets/images/Spotlight Product Images/720 MP Cameras/HIKVISION_DS-2CE16C0T-IT3_Bullet_Camera1-removebg-preview.png" alt="" class="swap product__img" />
+            <img
+              data-alt-src="./Assets/images/Spotlight Product Images/720 MP Cameras/HIKVISION_DS-2CE16C0T-IT3_Bullet_Camera1-removebg-preview.png"
+              src="./Assets/images/Spotlight Product Images/720 MP Cameras/HIKVISION_DS-2CE16C0T-IT3_Bullet_Camera1-removebg-preview.png"
+              alt=""
+              class="swap product__img"
+            />
 
-            <span class="product__name">HIKVISION DS-2CE16C0T-IT3 Bullet Camera</span>
+            <span class="product__name"
+              >HIKVISION DS-2CE16C0T-IT3 Bullet Camera</span
+            >
 
             <span class="product__price">UGX 150,000</span>
 
@@ -862,11 +935,17 @@
             </button>
           </article>
 
-          
           <article class="product">
-            <img data-alt-src="" src="./Assets/images/Spotlight Product Images/720 MP Cameras/Hikvision_DS-2CE16C0T-IRPF_HD_720p_IR_Bullet_Camera1-removebg-preview.png" alt="" class="swap product__img" />
+            <img
+              data-alt-src="./Assets/images/Spotlight Product Images/720 MP Cameras/Hikvision_DS-2CE16C0T-IRPF_HD_720p_IR_Bullet_Camera1-removebg-preview.png"
+              src="./Assets/images/Spotlight Product Images/720 MP Cameras/Hikvision_DS-2CE16C0T-IRPF_HD_720p_IR_Bullet_Camera1-removebg-preview.png"
+              alt=""
+              class="swap product__img"
+            />
 
-            <span class="product__name">HIKVISION DS-2CE56C0T-IR Turret Camera (2.8mm)</span>
+            <span class="product__name"
+              >HIKVISION DS-2CE56C0T-IR Turret Camera (2.8mm)</span
+            >
 
             <span class="product__price">UGX 130,000</span>
 
@@ -894,9 +973,16 @@
           </article>
 
           <article class="product">
-            <img data-alt-src="./Assets/images/Spotlight Product Images/720 MP Cameras/Hikvision_DS-2CE56C0T-IRPF_HD_720p_Indoor_IR_Turret_Camera1-removebg-preview.png" src="./Assets/images/Spotlight Product Images/720 MP Cameras/Hikvision_DS-2CE56C0T-IRPF_HD_720p_Indoor_IR_Turret_Camera1-removebg-preview.png" alt="" class="swap product__img" />
+            <img
+              data-alt-src="./Assets/images/Spotlight Product Images/720 MP Cameras/Hikvision_DS-2CE56C0T-IRPF_HD_720p_Indoor_IR_Turret_Camera1-removebg-preview.png"
+              src="./Assets/images/Spotlight Product Images/720 MP Cameras/Hikvision_DS-2CE56C0T-IRPF_HD_720p_Indoor_IR_Turret_Camera1-removebg-preview.png"
+              alt=""
+              class="swap product__img"
+            />
 
-            <span class="product__name">Hikvision DS-2CE56C0T-IRPF HD 720p Indoor IR Turret Camera</span>
+            <span class="product__name"
+              >Hikvision DS-2CE56C0T-IRPF HD 720p Indoor IR Turret Camera</span
+            >
 
             <span class="product__price">UGX 100,000</span>
 
@@ -924,9 +1010,16 @@
           </article>
 
           <article class="product">
-            <img data-alt-src="./Assets/images/Spotlight Product Images/08 Port Switches/D-Link_10-Port_Gigabit_WebSmart_PoE_Switch__DGS-1210-10P_1-removebg-preview.png" src="./Assets/images/Spotlight Product Images/08 Port Switches/D-Link_10-Port_Gigabit_WebSmart_PoE_Switch__DGS-1210-10P_1-removebg-preview.png" alt="" class="swap product__img" />
+            <img
+              data-alt-src="./Assets/images/Spotlight Product Images/08 Port Switches/D-Link_10-Port_Gigabit_WebSmart_PoE_Switch__DGS-1210-10P_1-removebg-preview.png"
+              src="./Assets/images/Spotlight Product Images/08 Port Switches/D-Link_10-Port_Gigabit_WebSmart_PoE_Switch__DGS-1210-10P_1-removebg-preview.png"
+              alt=""
+              class="swap product__img"
+            />
 
-            <span class="product__name">D-Link 10-Port Gigabit WebSmart PoE Switch (DGS-1210-10P)</span>
+            <span class="product__name"
+              >D-Link 10-Port Gigabit WebSmart PoE Switch (DGS-1210-10P)</span
+            >
 
             <span class="product__price">UGX 1,450,000</span>
 
@@ -954,9 +1047,17 @@
           </article>
 
           <article class="product">
-            <img data-alt-src="./Assets/images/Spotlight Product Images/08 Port Switches/D-Link_8-Port_DGS-108_Gigabit_Unmanaged_Metal_Desktop_Switch1-removebg-preview.png" src="./Assets/images/Spotlight Product Images/08 Port Switches/D-Link_8-Port_DGS-108_Gigabit_Unmanaged_Metal_Desktop_Switch1-removebg-preview.png" alt="" class="swap product__img" />
+            <img
+              data-alt-src="./Assets/images/Spotlight Product Images/08 Port Switches/D-Link_8-Port_DGS-108_Gigabit_Unmanaged_Metal_Desktop_Switch1-removebg-preview.png"
+              src="./Assets/images/Spotlight Product Images/08 Port Switches/D-Link_8-Port_DGS-108_Gigabit_Unmanaged_Metal_Desktop_Switch1-removebg-preview.png"
+              alt=""
+              class="swap product__img"
+            />
 
-            <span class="product__name">D-Link 8-Port DGS-108 Gigabit Unmanaged Metal Desktop Switch</span>
+            <span class="product__name"
+              >D-Link 8-Port DGS-108 Gigabit Unmanaged Metal Desktop
+              Switch</span
+            >
 
             <span class="product__price">UGX 250,000</span>
 
@@ -984,9 +1085,16 @@
           </article>
 
           <article class="product">
-            <img data-alt-src="./Assets/images/Spotlight Product Images/08 Port Switches/D-Link_8-Port_Gigabit_Desktop_Switch__DGS-1008P_1-removebg-preview.png" src="./Assets/images/Spotlight Product Images/08 Port Switches/D-Link_8-Port_Gigabit_Desktop_Switch__DGS-1008P_1-removebg-preview.png" alt="" class="swap product__img" />
+            <img
+              data-alt-src="./Assets/images/Spotlight Product Images/08 Port Switches/D-Link_8-Port_Gigabit_Desktop_Switch__DGS-1008P_1-removebg-preview.png"
+              src="./Assets/images/Spotlight Product Images/08 Port Switches/D-Link_8-Port_Gigabit_Desktop_Switch__DGS-1008P_1-removebg-preview.png"
+              alt=""
+              class="swap product__img"
+            />
 
-            <span class="product__name">D-Link 8-Port Gigabit Desktop Switch (DGS-1008P)</span>
+            <span class="product__name"
+              >D-Link 8-Port Gigabit Desktop Switch (DGS-1008P)</span
+            >
 
             <span class="product__price">UGX 500,000</span>
 
@@ -1013,9 +1121,13 @@
             </button>
           </article>
 
-          
           <article class="product">
-            <img data-alt-src="./Assets/images/Spotlight Product Images/08 Port Switches/D-link_DES-1008A_8-Ports_Switch1-removebg-preview.png" src="./Assets/images/Spotlight Product Images/08 Port Switches/D-link_DES-1008A_8-Ports_Switch1-removebg-preview.png" alt="" class="swap product__img" />
+            <img
+              data-alt-src="./Assets/images/Spotlight Product Images/08 Port Switches/D-link_DES-1008A_8-Ports_Switch1-removebg-preview.png"
+              src="./Assets/images/Spotlight Product Images/08 Port Switches/D-link_DES-1008A_8-Ports_Switch1-removebg-preview.png"
+              alt=""
+              class="swap product__img"
+            />
 
             <span class="product__name">D-link DES-1008A 8-Ports Switch</span>
 
@@ -1045,9 +1157,16 @@
           </article>
 
           <article class="product">
-            <img data-alt-src="./Assets/images/Spotlight Product Images/08 Port Switches/D-Link_DGS_1100-08p_8-Port_Gigabit_PoE_Smart_Managed_Switch1-removebg-preview.png" src="./Assets/images/Spotlight Product Images/08 Port Switches/D-Link_DGS_1100-08p_8-Port_Gigabit_PoE_Smart_Managed_Switch1-removebg-preview.png" alt="" class="swap product__img" />
+            <img
+              data-alt-src="./Assets/images/Spotlight Product Images/08 Port Switches/D-Link_DGS_1100-08p_8-Port_Gigabit_PoE_Smart_Managed_Switch1-removebg-preview.png"
+              src="./Assets/images/Spotlight Product Images/08 Port Switches/D-Link_DGS_1100-08p_8-Port_Gigabit_PoE_Smart_Managed_Switch1-removebg-preview.png"
+              alt=""
+              class="swap product__img"
+            />
 
-            <span class="product__name">D-Link DGS-1100-08p 8-Port Gigabit PoE Smart Managed Switch</span>
+            <span class="product__name"
+              >D-Link DGS-1100-08p 8-Port Gigabit PoE Smart Managed Switch</span
+            >
 
             <span class="product__price">UGX 1,000,000</span>
 
@@ -1075,9 +1194,17 @@
           </article>
 
           <article class="product">
-            <img data-alt-src="./Assets/images/Spotlight Product Images/08 Port Switches/Linksys_8-Port_Business_Desktop_Gigabit_Switch__LGS108-ME-RTL_1-removebg-preview.png" src="./Assets/images/Spotlight Product Images/08 Port Switches/Linksys_8-Port_Business_Desktop_Gigabit_Switch__LGS108-ME-RTL_1-removebg-preview.png" alt="" class="swap product__img" />
+            <img
+              data-alt-src="./Assets/images/Spotlight Product Images/08 Port Switches/Linksys_8-Port_Business_Desktop_Gigabit_Switch__LGS108-ME-RTL_1-removebg-preview.png"
+              src="./Assets/images/Spotlight Product Images/08 Port Switches/Linksys_8-Port_Business_Desktop_Gigabit_Switch__LGS108-ME-RTL_1-removebg-preview.png"
+              alt=""
+              class="swap product__img"
+            />
 
-            <span class="product__name">Linksys 8-Port Business Desktop Gigabit Switch (LGS108-ME-RTL)</span>
+            <span class="product__name"
+              >Linksys 8-Port Business Desktop Gigabit Switch
+              (LGS108-ME-RTL)</span
+            >
 
             <span class="product__price">UGX 230,000</span>
 
@@ -1105,9 +1232,16 @@
           </article>
 
           <article class="product">
-            <img data-alt-src="./Assets/images/Spotlight Product Images/08 Port Switches/TP-Link_8-Port_Fast_Ethernet_Desktop_Switch__TL-SF1008D_1-removebg-preview.png" src="./Assets/images/Spotlight Product Images/08 Port Switches/TP-Link_8-Port_Fast_Ethernet_Desktop_Switch__TL-SF1008D_1-removebg-preview.png" alt="" class="swap product__img" />
+            <img
+              data-alt-src="./Assets/images/Spotlight Product Images/08 Port Switches/TP-Link_8-Port_Fast_Ethernet_Desktop_Switch__TL-SF1008D_1-removebg-preview.png"
+              src="./Assets/images/Spotlight Product Images/08 Port Switches/TP-Link_8-Port_Fast_Ethernet_Desktop_Switch__TL-SF1008D_1-removebg-preview.png"
+              alt=""
+              class="swap product__img"
+            />
 
-            <span class="product__name">TP-Link 8-Port Fast Ethernet Desktop Switch (TL-SF1008D)</span>
+            <span class="product__name"
+              >TP-Link 8-Port Fast Ethernet Desktop Switch (TL-SF1008D)</span
+            >
 
             <span class="product__price">UGX 120,000</span>
 
@@ -1135,9 +1269,16 @@
           </article>
 
           <article class="product">
-            <img data-alt-src="./Assets/images/Spotlight Product Images/08 Port Switches/TP-Link_8-Port_Gigabit_Desktop_Switch__TL-SG1008D_1-removebg-preview.png" src="./Assets/images/Spotlight Product Images/08 Port Switches/TP-Link_8-Port_Gigabit_Desktop_Switch__TL-SG1008D_1-removebg-preview.png" alt="" class="swap product__img" />
+            <img
+              data-alt-src="./Assets/images/Spotlight Product Images/08 Port Switches/TP-Link_8-Port_Gigabit_Desktop_Switch__TL-SG1008D_1-removebg-preview.png"
+              src="./Assets/images/Spotlight Product Images/08 Port Switches/TP-Link_8-Port_Gigabit_Desktop_Switch__TL-SG1008D_1-removebg-preview.png"
+              alt=""
+              class="swap product__img"
+            />
 
-            <span class="product__name">TP-Link 8-Port Gigabit Desktop Switch (TL-SG1008D)</span>
+            <span class="product__name"
+              >TP-Link 8-Port Gigabit Desktop Switch (TL-SG1008D)</span
+            >
 
             <span class="product__price">UGX 180,000</span>
 
@@ -1195,7 +1336,12 @@
           </article>
 
           <article class="product">
-            <img data-alt-src="./Assets/images/Spotlight Product Images/Samsung Series/Samsung_Galaxy_A111-removebg-preview.png" src="./Assets/images/Spotlight Product Images/Samsung Series/Samsung_Galaxy_A111-removebg-preview.png" alt="" class="swap product__img" />
+            <img
+              data-alt-src="./Assets/images/Spotlight Product Images/Samsung Series/Samsung_Galaxy_A111-removebg-preview.png"
+              src="./Assets/images/Spotlight Product Images/Samsung Series/Samsung_Galaxy_A111-removebg-preview.png"
+              alt=""
+              class="swap product__img"
+            />
 
             <span class="product__name">Samsung Galaxy A11</span>
 
@@ -1255,7 +1401,12 @@
           </article>
 
           <article class="product">
-            <img data-alt-src="./Assets/images/Spotlight Product Images/Samsung Series/Samsung_Galaxy_A21s1-removebg-preview.png" src="./Assets/images/Spotlight Product Images/Samsung Series/Samsung_Galaxy_A21s1-removebg-preview.png" alt="" class="swap product__img" />
+            <img
+              data-alt-src="./Assets/images/Spotlight Product Images/Samsung Series/Samsung_Galaxy_A21s1-removebg-preview.png"
+              src="./Assets/images/Spotlight Product Images/Samsung Series/Samsung_Galaxy_A21s1-removebg-preview.png"
+              alt=""
+              class="swap product__img"
+            />
 
             <span class="product__name">Samsung Galaxy A21s</span>
 
@@ -1315,7 +1466,12 @@
           </article>
 
           <article class="product">
-            <img data-alt-src="./Assets/images/Spotlight Product Images/Samsung Series/Samsung_Galaxy_A311-removebg-preview.png" src="./Assets/images/Spotlight Product Images/Samsung Series/Samsung_Galaxy_A311-removebg-preview.png" alt="" class="swap product__img" />
+            <img
+              data-alt-src="./Assets/images/Spotlight Product Images/Samsung Series/Samsung_Galaxy_A311-removebg-preview.png"
+              src="./Assets/images/Spotlight Product Images/Samsung Series/Samsung_Galaxy_A311-removebg-preview.png"
+              alt=""
+              class="swap product__img"
+            />
 
             <span class="product__name">Samsung Galaxy A31</span>
 
@@ -1345,7 +1501,12 @@
           </article>
 
           <article class="product">
-            <img data-alt-src="./Assets/images/Spotlight Product Images/Samsung Series/Samsung_Galaxy_A711-removebg-preview.png" src="./Assets/images/Spotlight Product Images/Samsung Series/Samsung_Galaxy_A711-removebg-preview.png" alt="" class="swap product__img" />
+            <img
+              data-alt-src="./Assets/images/Spotlight Product Images/Samsung Series/Samsung_Galaxy_A711-removebg-preview.png"
+              src="./Assets/images/Spotlight Product Images/Samsung Series/Samsung_Galaxy_A711-removebg-preview.png"
+              alt=""
+              class="swap product__img"
+            />
 
             <span class="product__name">Samsung Galaxy A71</span>
 
@@ -1375,9 +1536,16 @@
           </article>
 
           <article class="product">
-            <img data-alt-src="./Assets/images/Spotlight Product Images/Access Control Systems/ZKTeco_U270_Finger_Print_Time_Attendance_Terminal1-removebg-preview.png" src="./Assets/images/Spotlight Product Images/Access Control Systems/ZKTeco_U270_Finger_Print_Time_Attendance_Terminal1-removebg-preview.png" alt="" class="swap product__img" />
+            <img
+              data-alt-src="./Assets/images/Spotlight Product Images/Access Control Systems/ZKTeco_U270_Finger_Print_Time_Attendance_Terminal1-removebg-preview.png"
+              src="./Assets/images/Spotlight Product Images/Access Control Systems/ZKTeco_U270_Finger_Print_Time_Attendance_Terminal1-removebg-preview.png"
+              alt=""
+              class="swap product__img"
+            />
 
-            <span class="product__name">ZKTeco U270 Finger Print Time Attendance Terminal</span>
+            <span class="product__name"
+              >ZKTeco U270 Finger Print Time Attendance Terminal</span
+            >
 
             <span class="product__price">UGX 1,200,000</span>
 
@@ -1405,9 +1573,16 @@
           </article>
 
           <article class="product">
-            <img data-alt-src="./Assets/images/Spotlight Product Images/Accessories/Hikvision_DS-1227ZJ_In-ceiling_Mount_Bracket1-removebg-preview.png" src="./Assets/images/Spotlight Product Images/Accessories/Hikvision_DS-1227ZJ_In-ceiling_Mount_Bracket1-removebg-preview.png" alt="" class="swap product__img" />
+            <img
+              data-alt-src="./Assets/images/Spotlight Product Images/Accessories/Hikvision_DS-1227ZJ_In-ceiling_Mount_Bracket1-removebg-preview.png"
+              src="./Assets/images/Spotlight Product Images/Accessories/Hikvision_DS-1227ZJ_In-ceiling_Mount_Bracket1-removebg-preview.png"
+              alt=""
+              class="swap product__img"
+            />
 
-            <span class="product__name">Hikvision DS-1227ZJ In-ceiling Mount Bracket</span>
+            <span class="product__name"
+              >Hikvision DS-1227ZJ In-ceiling Mount Bracket</span
+            >
 
             <span class="product__price">UGX 210,000</span>
 
@@ -1437,7 +1612,9 @@
           <article class="product">
             <img data-alt-src="" src="" alt="" class="swap product__img" />
 
-            <span class="product__name">Hikvision DS-1272ZJ-110-TRS Wall Mounting Bracket</span>
+            <span class="product__name"
+              >Hikvision DS-1272ZJ-110-TRS Wall Mounting Bracket</span
+            >
 
             <span class="product__price">UGX 200,000</span>
 
@@ -1467,7 +1644,9 @@
           <article class="product">
             <img data-alt-src="" src="" alt="" class="swap product__img" />
 
-            <span class="product__name">Hikvision DS-3E0109P-E 8-ports Unmanaged PoE Switch</span>
+            <span class="product__name"
+              >Hikvision DS-3E0109P-E 8-ports Unmanaged PoE Switch</span
+            >
 
             <span class="product__price">UGX 1,000,000</span>
 
@@ -1497,7 +1676,9 @@
           <article class="product">
             <img data-alt-src="" src="" alt="" class="swap product__img" />
 
-            <span class="product__name">Hikvision DS-3E0318P-E 16-ports Unmanaged PoE Switch</span>
+            <span class="product__name"
+              >Hikvision DS-3E0318P-E 16-ports Unmanaged PoE Switch</span
+            >
 
             <span class="product__price">UGX 1,600,000</span>
 
@@ -1525,9 +1706,16 @@
           </article>
 
           <article class="product">
-            <img data-alt-src="./Assets/images/Spotlight Product Images/Accessories/Seagate_1TB_Surveillance_Hard_Drive_ENT_NAS2-removebg-preview.png" src="./Assets/images/Spotlight Product Images/Accessories/Seagate_1TB_Surveillance_Hard_Drive_ENT_NAS2-removebg-preview.png" alt="" class="swap product__img" />
+            <img
+              data-alt-src="./Assets/images/Spotlight Product Images/Accessories/Seagate_1TB_Surveillance_Hard_Drive_ENT_NAS2-removebg-preview.png"
+              src="./Assets/images/Spotlight Product Images/Accessories/Seagate_1TB_Surveillance_Hard_Drive_ENT_NAS2-removebg-preview.png"
+              alt=""
+              class="swap product__img"
+            />
 
-            <span class="product__name">Seagate 1TB Surveillance Hard Drive ENT NAS</span>
+            <span class="product__name"
+              >Seagate 1TB Surveillance Hard Drive ENT NAS</span
+            >
 
             <span class="product__price">UGX 420,000</span>
 
@@ -1555,9 +1743,16 @@
           </article>
 
           <article class="product">
-            <img data-alt-src="./Assets/images/Spotlight Product Images/Accessories/Seagate_2TB_Surveillance_Hard_Drive_NAS_ENT1-removebg-preview.png" src="./Assets/images/Spotlight Product Images/Accessories/Seagate_2TB_Surveillance_Hard_Drive_NAS_ENT1-removebg-preview.png" alt="" class="swap product__img" />
+            <img
+              data-alt-src="./Assets/images/Spotlight Product Images/Accessories/Seagate_2TB_Surveillance_Hard_Drive_NAS_ENT1-removebg-preview.png"
+              src="./Assets/images/Spotlight Product Images/Accessories/Seagate_2TB_Surveillance_Hard_Drive_NAS_ENT1-removebg-preview.png"
+              alt=""
+              class="swap product__img"
+            />
 
-            <span class="product__name">Seagate 2TB Surveillance Hard Drive NAS ENT</span>
+            <span class="product__name"
+              >Seagate 2TB Surveillance Hard Drive NAS ENT</span
+            >
 
             <span class="product__price">UGX 500,000</span>
 
@@ -1585,9 +1780,16 @@
           </article>
 
           <article class="product">
-            <img data-alt-src="./Assets/images/Spotlight Product Images/Accessories/Seagate_4TB_Surveillance_Hard_Drive1-removebg-preview.png" src="./Assets/images/Spotlight Product Images/Accessories/Seagate_4TB_Surveillance_Hard_Drive1-removebg-preview.png" alt="" class="swap product__img" />
+            <img
+              data-alt-src="./Assets/images/Spotlight Product Images/Accessories/Seagate_4TB_Surveillance_Hard_Drive1-removebg-preview.png"
+              src="./Assets/images/Spotlight Product Images/Accessories/Seagate_4TB_Surveillance_Hard_Drive1-removebg-preview.png"
+              alt=""
+              class="swap product__img"
+            />
 
-            <span class="product__name">Seagate 4TB Surveillance Hard Drive</span>
+            <span class="product__name"
+              >Seagate 4TB Surveillance Hard Drive</span
+            >
 
             <span class="product__price">UGX 700,000</span>
 
@@ -1615,9 +1817,16 @@
           </article>
 
           <article class="product">
-            <img data-alt-src="./Assets/images/Spotlight Product Images/Accessories/Seagate_6TB_Surveillance_Hard_Drive_SKY_HAWK1-removebg-preview.png" src="./Assets/images/Spotlight Product Images/Accessories/Seagate_6TB_Surveillance_Hard_Drive_SKY_HAWK1-removebg-preview.png" alt="" class="swap product__img" />
+            <img
+              data-alt-src="./Assets/images/Spotlight Product Images/Accessories/Seagate_6TB_Surveillance_Hard_Drive_SKY_HAWK1-removebg-preview.png"
+              src="./Assets/images/Spotlight Product Images/Accessories/Seagate_6TB_Surveillance_Hard_Drive_SKY_HAWK1-removebg-preview.png"
+              alt=""
+              class="swap product__img"
+            />
 
-            <span class="product__name">Seagate 6TB Surveillance Hard Drive SKY HAWK</span>
+            <span class="product__name"
+              >Seagate 6TB Surveillance Hard Drive SKY HAWK</span
+            >
 
             <span class="product__price">UGX 1,200,000</span>
 
@@ -1645,9 +1854,16 @@
           </article>
 
           <article class="product">
-            <img data-alt-src="./Assets/images/Spotlight Product Images/Accessories/Seagate_8TB_Surveillance_Hard_Drive__SKY_HAWK1-removebg-preview.png" src="./Assets/images/Spotlight Product Images/Accessories/Seagate_8TB_Surveillance_Hard_Drive__SKY_HAWK1-removebg-preview.png" alt="" class="swap product__img" />
+            <img
+              data-alt-src="./Assets/images/Spotlight Product Images/Accessories/Seagate_8TB_Surveillance_Hard_Drive__SKY_HAWK1-removebg-preview.png"
+              src="./Assets/images/Spotlight Product Images/Accessories/Seagate_8TB_Surveillance_Hard_Drive__SKY_HAWK1-removebg-preview.png"
+              alt=""
+              class="swap product__img"
+            />
 
-            <span class="product__name"> Seagate 8TB Surveillance Hard Drive  SKY HAWK</span>
+            <span class="product__name">
+              Seagate 8TB Surveillance Hard Drive SKY HAWK</span
+            >
 
             <span class="product__price">UGX 1,500,000</span>
 
@@ -1735,9 +1951,16 @@
           </article>
 
           <article class="product">
-            <img data-alt-src="./Assets/images/Spotlight Product Images/Amazon Firesticks/Fire_TV_Stick_4K_with_Alexa_Voice_Remote1-removebg-preview.png" src="./Assets/images/Spotlight Product Images/Amazon Firesticks/Fire_TV_Stick_4K_with_Alexa_Voice_Remote1-removebg-preview.png" alt="" class="swap product__img" />
+            <img
+              data-alt-src="./Assets/images/Spotlight Product Images/Amazon Firesticks/Fire_TV_Stick_4K_with_Alexa_Voice_Remote1-removebg-preview.png"
+              src="./Assets/images/Spotlight Product Images/Amazon Firesticks/Fire_TV_Stick_4K_with_Alexa_Voice_Remote1-removebg-preview.png"
+              alt=""
+              class="swap product__img"
+            />
 
-            <span class="product__name">Fire TV Stick 4K with Alexa Voice Remote</span>
+            <span class="product__name"
+              >Fire TV Stick 4K with Alexa Voice Remote</span
+            >
 
             <span class="product__price">UGX 380,000</span>
 
@@ -1765,9 +1988,16 @@
           </article>
 
           <article class="product">
-            <img data-alt-src="./Assets/images/Spotlight Product Images/Amazon Firesticks/Fire_TV_Stick_with_Alexa_Voice_Remote1-removebg-preview.png" src="./Assets/images/Spotlight Product Images/Amazon Firesticks/Fire_TV_Stick_with_Alexa_Voice_Remote1-removebg-preview.png" alt="" class="swap product__img" />
+            <img
+              data-alt-src="./Assets/images/Spotlight Product Images/Amazon Firesticks/Fire_TV_Stick_with_Alexa_Voice_Remote1-removebg-preview.png"
+              src="./Assets/images/Spotlight Product Images/Amazon Firesticks/Fire_TV_Stick_with_Alexa_Voice_Remote1-removebg-preview.png"
+              alt=""
+              class="swap product__img"
+            />
 
-            <span class="product__name">Fire TV Stick with Alexa Voice Remote</span>
+            <span class="product__name"
+              >Fire TV Stick with Alexa Voice Remote</span
+            >
 
             <span class="product__price">UGX 350,000</span>
 
@@ -1827,7 +2057,9 @@
           <article class="product">
             <img data-alt-src="" src="" alt="" class="swap product__img" />
 
-            <span class="product__name">HIKVISION 1080p 4 Channel DVR KIT (2 Indoor, 2 Outdoor) </span>
+            <span class="product__name"
+              >HIKVISION 1080p 4 Channel DVR KIT (2 Indoor, 2 Outdoor)
+            </span>
 
             <span class="product__price">UGX 1,100,000</span>
 
@@ -1857,7 +2089,9 @@
           <article class="product">
             <img data-alt-src="" src="" alt="" class="swap product__img" />
 
-            <span class="product__name">HIKVISION 1080p 8 Channel DVR Kit (4 Indoor, 4 Outdoor)</span>
+            <span class="product__name"
+              >HIKVISION 1080p 8 Channel DVR Kit (4 Indoor, 4 Outdoor)</span
+            >
 
             <span class="product__price">UGX 1,700,000</span>
 
@@ -1917,7 +2151,9 @@
           <article class="product">
             <img data-alt-src="" src="" alt="" class="swap product__img" />
 
-            <span class="product__name">HIKVISION 32-Channel DVR (DS-7232HQHI-K2)</span>
+            <span class="product__name"
+              >HIKVISION 32-Channel DVR (DS-7232HQHI-K2)</span
+            >
 
             <span class="product__price">UGX 2,100,000</span>
 
@@ -1947,7 +2183,9 @@
           <article class="product">
             <img data-alt-src="" src="" alt="" class="swap product__img" />
 
-            <span class="product__name">HIKVISION 4 Channel DVR Kit (2 Indoor, 2 Outdoor)</span>
+            <span class="product__name"
+              >HIKVISION 4 Channel DVR Kit (2 Indoor, 2 Outdoor)</span
+            >
 
             <span class="product__price">UGX 1,000,000</span>
 
@@ -1977,7 +2215,9 @@
           <article class="product">
             <img data-alt-src="" src="" alt="" class="swap product__img" />
 
-            <span class="product__name">HIKVISION 8 Channel DVR Kit (4 indoor, 4 outdoor)</span>
+            <span class="product__name"
+              >HIKVISION 8 Channel DVR Kit (4 indoor, 4 outdoor)</span
+            >
 
             <span class="product__price">UGX 1,300,000</span>
 
@@ -2007,7 +2247,9 @@
           <article class="product">
             <img data-alt-src="" src="" alt="" class="swap product__img" />
 
-            <span class="product__name">HIKVISION DS-7204HGHI-F1 Turbo HD DVR 4 CH</span>
+            <span class="product__name"
+              >HIKVISION DS-7204HGHI-F1 Turbo HD DVR 4 CH</span
+            >
 
             <span class="product__price">UGX 650,000</span>
 
@@ -2037,7 +2279,9 @@
           <article class="product">
             <img data-alt-src="" src="" alt="" class="swap product__img" />
 
-            <span class="product__name">HIKVISION DS-7204HQHI-K1 Turbo HD DVR 4CH</span>
+            <span class="product__name"
+              >HIKVISION DS-7204HQHI-K1 Turbo HD DVR 4CH</span
+            >
 
             <span class="product__price">UGX 700,000</span>
 
@@ -2067,7 +2311,9 @@
           <article class="product">
             <img data-alt-src="" src="" alt="" class="swap product__img" />
 
-            <span class="product__name">HIKVISION DS-7208HGHI-F1 Turbo HD DVR 4CH</span>
+            <span class="product__name"
+              >HIKVISION DS-7208HGHI-F1 Turbo HD DVR 4CH</span
+            >
 
             <span class="product__price">UGX 800,000</span>
 
@@ -2097,7 +2343,9 @@
           <article class="product">
             <img data-alt-src="" src="" alt="" class="swap product__img" />
 
-            <span class="product__name">HIKVISION DS-7208HQHI-K1 Turbo HD DVR 8CH</span>
+            <span class="product__name"
+              >HIKVISION DS-7208HQHI-K1 Turbo HD DVR 8CH</span
+            >
 
             <span class="product__price">UGX 900,000</span>
 
@@ -2127,7 +2375,9 @@
           <article class="product">
             <img data-alt-src="" src="" alt="" class="swap product__img" />
 
-            <span class="product__name">HIKVISION DS-7208HGHI-F1 Turbo HD DVR 8CH</span>
+            <span class="product__name"
+              >HIKVISION DS-7208HGHI-F1 Turbo HD DVR 8CH</span
+            >
 
             <span class="product__price">UGX 870,000</span>
 
@@ -2157,7 +2407,9 @@
           <article class="product">
             <img data-alt-src="" src="" alt="" class="swap product__img" />
 
-            <span class="product__name">HIKVISION DS-7216HGHI-F1 Turbo HD DVR 16 CH</span>
+            <span class="product__name"
+              >HIKVISION DS-7216HGHI-F1 Turbo HD DVR 16 CH</span
+            >
 
             <span class="product__price">UGX 1,000,000</span>
 
@@ -2187,7 +2439,9 @@
           <article class="product">
             <img data-alt-src="" src="" alt="" class="swap product__img" />
 
-            <span class="product__name">HIKVISION DS-7216HQHI-K1 Turbo HD DVR 16 CH</span>
+            <span class="product__name"
+              >HIKVISION DS-7216HQHI-K1 Turbo HD DVR 16 CH</span
+            >
 
             <span class="product__price">UGX 1,200,000</span>
 
@@ -2217,7 +2471,9 @@
           <article class="product">
             <img data-alt-src="" src="" alt="" class="swap product__img" />
 
-            <span class="product__name">HIKVISION DS-7216HQHI-K2 Turbo HD DVR 16 CH</span>
+            <span class="product__name"
+              >HIKVISION DS-7216HQHI-K2 Turbo HD DVR 16 CH</span
+            >
 
             <span class="product__price">UGX 1,400,000</span>
 
@@ -2247,7 +2503,9 @@
           <article class="product">
             <img data-alt-src="" src="" alt="" class="swap product__img" />
 
-            <span class="product__name">HIKVISION DS-7224HQHI-K2 Turbo HD DVR</span>
+            <span class="product__name"
+              >HIKVISION DS-7224HQHI-K2 Turbo HD DVR</span
+            >
 
             <span class="product__price">UGX 2,300,000</span>
 
@@ -2333,8 +2591,6 @@
               <div class="dots"></div>
             </button>
           </article>
-          
-          
         </div>
 
         <div class="product__pages bd-grid">
@@ -2353,8 +2609,9 @@
     <footer class="footer section">
       <div class="footer__container bd-grid">
         <div class="footer__box">
-          <h3 class="footer__title">The Network.</h3>
-          <p class="footer__description">New collection of shoes 2020.</p>
+          <h3 class="footer__title">
+            <img src="./Assets/images/output-onlinepngtools.png" alt="logo" />
+          </h3>
         </div>
 
         <div class="footer__box">
@@ -2362,32 +2619,139 @@
           <ul>
             <li><a href="#home" class="footer__link">Home</a></li>
             <li><a href="#featured" class="footer__link">Featured</a></li>
-            <li><a href="#women" class="footer__link">Women</a></li>
+            <li><a href="./shop.html" class="footer__link">Shop</a></li>
             <li><a href="#new" class="footer__link">New</a></li>
           </ul>
         </div>
 
-        <div class="footer__box">
-          <h3 class="footer__title">SUPPORT</h3>
-          <ul>
-            <li><a href="#" class="footer__link">Product Help</a></li>
-            <li><a href="#" class="footer__link">Customer Care</a></li>
-            <li><a href="#" class="footer__link">Authorized Services</a></li>
-          </ul>
+        <div class="footer__box" id="footer__box">
+          <h3 class="footer__title">GET IN TOUCH</h3>
+
+          <p class="footer__description">
+            <svg
+              class="social__logo"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"
+              />
+            </svg>
+            E-tower- Kampala Road - <br />Room B14 - Basement.
+          </p>
+
+          <p class="footer__description">
+            <svg
+              class="social__logo"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 22.621l-3.521-6.795c-.008.004-1.974.97-2.064 1.011-2.24 1.086-6.799-7.82-4.609-8.994l2.083-1.026-3.493-6.817-2.106 1.039c-7.202 3.755 4.233 25.982 11.6 22.615.121-.055 2.102-1.029 2.11-1.033z"
+              />
+            </svg>
+            +256 706 308220
+          </p>
+
+          <p class="footer__description">
+            <svg
+              class="social__logo"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 14h-7v-8h2v6h5v2z"
+              />
+            </svg>
+            Sun:Closed, Mon-Fri:8am-6pm,<br />
+            Sat:10am-4pm.
+          </p>
         </div>
 
         <div class="footer__box">
-          <a href="#" class="footer__social"><i class="bx bxl-facebook"></i></a>
+          <a href="#" class="footer__social">
+            <svg
+              class="social__logo"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"
+              />
+            </svg>
+          </a>
           <a href="#" class="footer__social"
-            ><i class="bx bxl-instagram"></i
-          ></a>
-          <a href="#" class="footer__social"><i class="bx bxl-twitter"></i></a>
-          <a href="#" class="footer__social"><i class="bx bxl-google"></i></a>
+            ><svg
+              class="social__logo"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+              />
+            </svg>
+          </a>
+
+          <a href="#" class="footer__social"
+            ><svg
+              class="social__logo"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+              />
+            </svg>
+          </a>
+          <a href="#" class="footer__social"
+            ><svg
+              class="social__logo"
+              width="24"
+              height="24"
+              xmlns="http://www.w3.org/2000/svg"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+            >
+              <path
+                d="M22.288 21h-20.576c-.945 0-1.712-.767-1.712-1.712v-13.576c0-.945.767-1.712 1.712-1.712h20.576c.945 0 1.712.767 1.712 1.712v13.576c0 .945-.767 1.712-1.712 1.712zm-10.288-6.086l-9.342-6.483-.02 11.569h18.684v-11.569l-9.322 6.483zm8.869-9.914h-17.789l8.92 6.229s6.252-4.406 8.869-6.229z"
+              />
+            </svg>
+          </a>
         </div>
       </div>
-      <p class="footer__copy">&#169; 2020 The Network. All rights reserved</p>
+      <p class="footer__copy">
+        &#169; 2020 The Network Company. All rights reserved
+      </p>
     </footer>
-
+    <a
+      href="https://api.whatsapp.com/send?phone=256706308220&text=Hello%21%20TheNetworkCompany%20m%C3%A1s%20ihave%C3%B3n%20an%20inquiry?%202."
+      class="float"
+      target="_blank"
+    >
+      <svg
+        class="my-float"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"
+        />
+      </svg>
+    </a>
     <!--===== MAIN JS =====-->
     <script src="./Assets/JS/jquery.js"></script>
     <script
@@ -2400,6 +2764,11 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+
+    <!-- (Optional) Latest compiled and minified JavaScript translation files -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/i18n/defaults-*.min.js"></script>
     <script src="./Assets/JS/jquery.rateit.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
     <script src="./Assets/JS/typewriter.js"></script>
